@@ -1,0 +1,99 @@
+{
+  "21fd97c8e23bb914": {
+    "enable_thinking": false,
+    "max_tokens": 8192,
+    "model": "glm-5.2",
+    "reasoning_effort": "none",
+    "stream": false,
+    "temperature": 0.0
+  },
+  "280613f33a305ae9": {
+    "max_tokens": 4096,
+    "model": "deepseek-v4-flash",
+    "response_format": {
+      "type": "json_object"
+    },
+    "stream": false,
+    "temperature": 0.0,
+    "thinking": {
+      "type": "disabled"
+    },
+    "tools": []
+  },
+  "3c763711657742eb": {
+    "max_tokens": 2048,
+    "model": "deepseek-v4-flash",
+    "response_format": {
+      "type": "json_object"
+    },
+    "stream": false,
+    "temperature": 0.0,
+    "thinking": {
+      "type": "disabled"
+    },
+    "tools": []
+  },
+  "4fecb6ad7dc40c2e": {
+    "enable_thinking": false,
+    "max_tokens": 4096,
+    "model": "qwen3.7-max-2026-06-08",
+    "stream": false,
+    "temperature": 0.0
+  },
+  "5a34d4cadce6d62e": {
+    "max_tokens": 65536,
+    "model": "deepseek-v4-flash",
+    "response_format": {
+      "type": "json_object"
+    },
+    "stream": false,
+    "temperature": 0.0,
+    "thinking": {
+      "type": "disabled"
+    },
+    "tools": []
+  },
+  "76795ba4272b8789": {
+    "enable_thinking": false,
+    "max_tokens": 8192,
+    "model": "qwen3.7-max-2026-06-08",
+    "stream": false,
+    "temperature": 0.0
+  },
+  "916dd86188609914": {
+    "enable_thinking": false,
+    "max_tokens": 4096,
+    "model": "glm-5.2",
+    "reasoning_effort": "none",
+    "stream": false,
+    "temperature": 0.0
+  },
+  "ef935860123cce45": {
+    "enable_thinking": false,
+    "max_tokens": 2048,
+    "model": "glm-5.2",
+    "reasoning_effort": "none",
+    "stream": false,
+    "temperature": 0.0
+  },
+  "f59acafb54cabd14": {
+    "max_tokens": 8192,
+    "model": "deepseek-v4-flash",
+    "response_format": {
+      "type": "json_object"
+    },
+    "stream": false,
+    "temperature": 0.0,
+    "thinking": {
+      "type": "disabled"
+    },
+    "tools": []
+  },
+  "ff8365dd3e9b40bc": {
+    "enable_thinking": false,
+    "max_tokens": 2048,
+    "model": "qwen3.7-max-2026-06-08",
+    "stream": false,
+    "temperature": 0.0
+  }
+}

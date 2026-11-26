@@ -1,0 +1,4794 @@
+{
+  "paired_contrasts": [
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -65.0,
+      "comparison_success": 1,
+      "exact_mcnemar_p_two_sided": 3.637978807091713e-12,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 40,
+      "intact_success_comparison_failure": 39,
+      "n_pairs": 60,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "pooled",
+      "unchanged_failure": 20,
+      "unchanged_success": 1
+    },
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -40.0,
+      "comparison_success": 0,
+      "exact_mcnemar_p_two_sided": 0.0078125,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 8,
+      "intact_success_comparison_failure": 8,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "deepseek",
+      "unchanged_failure": 12,
+      "unchanged_success": 0
+    },
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -80.0,
+      "comparison_success": 0,
+      "exact_mcnemar_p_two_sided": 3.0517578125e-05,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 16,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "qwen",
+      "unchanged_failure": 4,
+      "unchanged_success": 0
+    },
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -75.0,
+      "comparison_success": 1,
+      "exact_mcnemar_p_two_sided": 6.103515625e-05,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 15,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "glm",
+      "unchanged_failure": 4,
+      "unchanged_success": 1
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 40,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 1,
+      "intact_success": 40,
+      "intact_success_comparison_failure": 1,
+      "n_pairs": 60,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "pooled",
+      "unchanged_failure": 19,
+      "unchanged_success": 39
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": 5.0,
+      "comparison_success": 9,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 1,
+      "intact_success": 8,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "deepseek",
+      "unchanged_failure": 11,
+      "unchanged_success": 8
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": -5.0,
+      "comparison_success": 15,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 1,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "qwen",
+      "unchanged_failure": 4,
+      "unchanged_success": 15
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 16,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "glm",
+      "unchanged_failure": 4,
+      "unchanged_success": 16
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 40,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 1,
+      "intact_success": 40,
+      "intact_success_comparison_failure": 1,
+      "n_pairs": 60,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "pooled",
+      "unchanged_failure": 19,
+      "unchanged_success": 39
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 5.0,
+      "comparison_success": 9,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 1,
+      "intact_success": 8,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "deepseek",
+      "unchanged_failure": 11,
+      "unchanged_success": 8
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 16,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "qwen",
+      "unchanged_failure": 4,
+      "unchanged_success": 16
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": -5.0,
+      "comparison_success": 15,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 1,
+      "n_pairs": 20,
+      "outcome": "full_action_contract_match",
+      "pairs": [
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "glm",
+      "unchanged_failure": 4,
+      "unchanged_success": 15
+    },
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -11.666666666666666,
+      "comparison_success": 33,
+      "exact_mcnemar_p_two_sided": 0.015625,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 40,
+      "intact_success_comparison_failure": 7,
+      "n_pairs": 60,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "pooled",
+      "unchanged_failure": 20,
+      "unchanged_success": 33
+    },
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 8,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 8,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "deepseek",
+      "unchanged_failure": 12,
+      "unchanged_success": 8
+    },
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -20.0,
+      "comparison_success": 12,
+      "exact_mcnemar_p_two_sided": 0.125,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 4,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "qwen",
+      "unchanged_failure": 4,
+      "unchanged_success": 12
+    },
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -15.0,
+      "comparison_success": 13,
+      "exact_mcnemar_p_two_sided": 0.25,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 3,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "glm",
+      "unchanged_failure": 4,
+      "unchanged_success": 13
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 40,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 1,
+      "intact_success": 40,
+      "intact_success_comparison_failure": 1,
+      "n_pairs": 60,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "pooled",
+      "unchanged_failure": 19,
+      "unchanged_success": 39
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": 5.0,
+      "comparison_success": 9,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 1,
+      "intact_success": 8,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "deepseek",
+      "unchanged_failure": 11,
+      "unchanged_success": 8
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": -5.0,
+      "comparison_success": 15,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 1,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "qwen",
+      "unchanged_failure": 4,
+      "unchanged_success": 15
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 16,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "glm",
+      "unchanged_failure": 4,
+      "unchanged_success": 16
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 1.6666666666666667,
+      "comparison_success": 41,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 1,
+      "intact_success": 40,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 60,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "pooled",
+      "unchanged_failure": 19,
+      "unchanged_success": 40
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 5.0,
+      "comparison_success": 9,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 1,
+      "intact_success": 8,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "deepseek",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "deepseek",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "deepseek",
+      "unchanged_failure": 11,
+      "unchanged_success": 8
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 16,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "qwen",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "qwen",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "qwen",
+      "unchanged_failure": 4,
+      "unchanged_success": 16
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "comparison_success": 16,
+      "exact_mcnemar_p_two_sided": 1.0,
+      "intact_failure_comparison_success": 0,
+      "intact_success": 16,
+      "intact_success_comparison_failure": 0,
+      "n_pairs": 20,
+      "outcome": "terminal_state_success",
+      "pairs": [
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:01"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:02"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:03"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:04"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:05"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:06"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:07"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:08"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:09"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:10"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:11"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:12"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:13"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:14"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:15"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:16"
+        },
+        {
+          "comparison": 0,
+          "intact": 0,
+          "provider": "glm",
+          "task_id": "future_probe:17"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:18"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:19"
+        },
+        {
+          "comparison": 1,
+          "intact": 1,
+          "provider": "glm",
+          "task_id": "future_probe:20"
+        }
+      ],
+      "provider": "glm",
+      "unchanged_failure": 4,
+      "unchanged_success": 16
+    }
+  ],
+  "task_cluster_bootstrap": [
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -65.0,
+      "outcome": "full_action_contract_match",
+      "percentile_95_interval_percentage_points": [
+        -80.0,
+        -48.333333333333336
+      ],
+      "provider_rows_per_task": 3,
+      "repetitions": 10000,
+      "seed": 20260724,
+      "task_count": 20,
+      "unit": "task"
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "outcome": "full_action_contract_match",
+      "percentile_95_interval_percentage_points": [
+        0.0,
+        0.0
+      ],
+      "provider_rows_per_task": 3,
+      "repetitions": 10000,
+      "seed": 20260724,
+      "task_count": 20,
+      "unit": "task"
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "outcome": "full_action_contract_match",
+      "percentile_95_interval_percentage_points": [
+        -5.0,
+        5.0
+      ],
+      "provider_rows_per_task": 3,
+      "repetitions": 10000,
+      "seed": 20260724,
+      "task_count": 20,
+      "unit": "task"
+    },
+    {
+      "comparison_arm": "necessary_state_deletion",
+      "comparison_minus_intact_percentage_points": -11.666666666666666,
+      "outcome": "terminal_state_success",
+      "percentile_95_interval_percentage_points": [
+        -23.333333333333332,
+        -1.6666666666666667
+      ],
+      "provider_rows_per_task": 3,
+      "repetitions": 10000,
+      "seed": 20260724,
+      "task_count": 20,
+      "unit": "task"
+    },
+    {
+      "comparison_arm": "counterfactual_wrong_state",
+      "comparison_minus_intact_percentage_points": 0.0,
+      "outcome": "terminal_state_success",
+      "percentile_95_interval_percentage_points": [
+        0.0,
+        0.0
+      ],
+      "provider_rows_per_task": 3,
+      "repetitions": 10000,
+      "seed": 20260724,
+      "task_count": 20,
+      "unit": "task"
+    },
+    {
+      "comparison_arm": "unrelated_state_perturbation",
+      "comparison_minus_intact_percentage_points": 1.6666666666666667,
+      "outcome": "terminal_state_success",
+      "percentile_95_interval_percentage_points": [
+        0.0,
+        5.0
+      ],
+      "provider_rows_per_task": 3,
+      "repetitions": 10000,
+      "seed": 20260724,
+      "task_count": 20,
+      "unit": "task"
+    }
+  ]
+}

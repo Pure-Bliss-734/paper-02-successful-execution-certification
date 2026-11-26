@@ -1,0 +1,1302 @@
+{
+  "by_action_type": {
+    "allow_or_deny_operation": {
+      "P": {
+        "count": 7,
+        "rate": 0.036458333333333336
+      },
+      "P_ignore_extra_context_link": {
+        "count": 9,
+        "rate": 0.046875
+      },
+      "R": {
+        "count": 129,
+        "rate": 0.671875
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.978665353101117,
+        "entity_recall": 0.978665353101117,
+        "exclusion_precision": 0.7760416666666666,
+        "exclusion_recall": 0.7760416666666666,
+        "relation_precision": 0.8008680555555555,
+        "relation_recall": 0.8324652777777778
+      },
+      "extra_relation_types": {
+        "action_precondition_establishment": 2,
+        "context_link": 156,
+        "dependency": 1,
+        "dependency_addition": 1
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 49,
+        "dependency_addition": 12,
+        "permission_grant": 11
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 408,
+        "observed": 496,
+        "precision": 0.6774193548387096,
+        "recall": 0.8235294117647058,
+        "true_positive": 336
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 7,
+          "four_to_nine": 121,
+          "one": 4,
+          "ten_or_more": 4,
+          "two_to_three": 56
+        },
+        "mean": 4.598958333333333,
+        "median": 4.0
+      },
+      "task_count": 16
+    },
+    "apply_current_bundle": {
+      "P": {
+        "count": 3,
+        "rate": 0.015625
+      },
+      "P_ignore_extra_context_link": {
+        "count": 69,
+        "rate": 0.359375
+      },
+      "R": {
+        "count": 188,
+        "rate": 0.9791666666666666
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9947232744107743,
+        "entity_recall": 0.9947232744107743,
+        "exclusion_precision": 0.703125,
+        "exclusion_recall": 0.703125,
+        "relation_precision": 0.3909722222222222,
+        "relation_recall": 0.375
+      },
+      "extra_relation_types": {
+        "context_link": 324,
+        "dependency_addition": 1
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 48,
+        "dependency_addition": 12
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 204,
+        "observed": 469,
+        "precision": 0.3070362473347548,
+        "recall": 0.7058823529411765,
+        "true_positive": 144
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 3,
+          "four_to_nine": 59,
+          "one": 35,
+          "two_to_three": 95
+        },
+        "mean": 3.0729166666666665,
+        "median": 3.0
+      },
+      "task_count": 16
+    },
+    "migrate_to_allowed_path": {
+      "P": {
+        "count": 22,
+        "rate": 0.11458333333333333
+      },
+      "P_ignore_extra_context_link": {
+        "count": 50,
+        "rate": 0.2604166666666667
+      },
+      "R": {
+        "count": 168,
+        "rate": 0.875
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9855499438832772,
+        "entity_recall": 0.9855499438832772,
+        "exclusion_precision": 0.84375,
+        "exclusion_recall": 0.84375,
+        "relation_precision": 0.7416666666666667,
+        "relation_recall": 0.9322916666666666
+      },
+      "extra_relation_types": {
+        "context_link": 204
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 12,
+        "path_addition": 12,
+        "replacement": 2
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 396,
+        "observed": 574,
+        "precision": 0.6445993031358885,
+        "recall": 0.9343434343434344,
+        "true_positive": 370
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 22,
+          "four_to_nine": 60,
+          "one": 12,
+          "ten_or_more": 2,
+          "two_to_three": 96
+        },
+        "mean": 3.6354166666666665,
+        "median": 2.0
+      },
+      "task_count": 16
+    },
+    "replace_current_object": {
+      "P": {
+        "count": 0,
+        "rate": 0.0
+      },
+      "P_ignore_extra_context_link": {
+        "count": 0,
+        "rate": 0.0
+      },
+      "R": {
+        "count": 0,
+        "rate": 0.0
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9548603595478595,
+        "entity_recall": 0.9548603595478595,
+        "exclusion_precision": 0.890625,
+        "exclusion_recall": 0.890625,
+        "relation_precision": 0.7520833333333333,
+        "relation_recall": 0.8932291666666666
+      },
+      "extra_relation_types": {
+        "context_link": 196
+      },
+      "missing_relation_types": {
+        "dependency_addition": 24,
+        "replacement": 25
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 420,
+        "observed": 567,
+        "precision": 0.654320987654321,
+        "recall": 0.8833333333333333,
+        "true_positive": 371
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "four_to_nine": 147,
+          "ten_or_more": 45
+        },
+        "mean": 8.458333333333334,
+        "median": 8.0
+      },
+      "task_count": 16
+    },
+    "select_current_interface": {
+      "P": {
+        "count": 11,
+        "rate": 0.057291666666666664
+      },
+      "P_ignore_extra_context_link": {
+        "count": 95,
+        "rate": 0.4947916666666667
+      },
+      "R": {
+        "count": 185,
+        "rate": 0.9635416666666666
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.991619547826145,
+        "entity_recall": 0.991619547826145,
+        "exclusion_precision": 0.8541666666666666,
+        "exclusion_recall": 0.8541666666666666,
+        "relation_precision": 0.4078125,
+        "relation_recall": 0.53125
+      },
+      "extra_relation_types": {
+        "action_precondition_establishment": 1,
+        "context_link": 372
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 12
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 204,
+        "observed": 565,
+        "precision": 0.3398230088495575,
+        "recall": 0.9411764705882353,
+        "true_positive": 192
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 11,
+          "four_to_nine": 82,
+          "one": 67,
+          "ten_or_more": 2,
+          "two_to_three": 30
+        },
+        "mean": 3.359375,
+        "median": 2.0
+      },
+      "task_count": 16
+    }
+  },
+  "by_family": {
+    "api_migration_state_transition": {
+      "P": {
+        "count": 5,
+        "rate": 0.026041666666666668
+      },
+      "P_ignore_extra_context_link": {
+        "count": 54,
+        "rate": 0.28125
+      },
+      "R": {
+        "count": 136,
+        "rate": 0.7083333333333334
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9813709390532307,
+        "entity_recall": 0.9813709390532307,
+        "exclusion_precision": 0.8020833333333334,
+        "exclusion_recall": 0.8020833333333334,
+        "relation_precision": 0.5569444444444445,
+        "relation_recall": 0.7161458333333334
+      },
+      "extra_relation_types": {
+        "context_link": 312
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 5,
+        "dependency_addition": 12
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 300,
+        "observed": 595,
+        "precision": 0.4756302521008403,
+        "recall": 0.9433333333333334,
+        "true_positive": 283
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 5,
+          "four_to_nine": 117,
+          "one": 14,
+          "ten_or_more": 7,
+          "two_to_three": 49
+        },
+        "mean": 4.760416666666667,
+        "median": 4.0
+      },
+      "task_count": 16
+    },
+    "decoy_heavy_same_prefix_config": {
+      "P": {
+        "count": 31,
+        "rate": 0.16145833333333334
+      },
+      "P_ignore_extra_context_link": {
+        "count": 49,
+        "rate": 0.2552083333333333
+      },
+      "R": {
+        "count": 143,
+        "rate": 0.7447916666666666
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9854425955988456,
+        "entity_recall": 0.9854425955988456,
+        "exclusion_precision": 0.84375,
+        "exclusion_recall": 0.84375,
+        "relation_precision": 0.7359375,
+        "relation_recall": 0.8246527777777778
+      },
+      "extra_relation_types": {
+        "context_link": 192,
+        "dependency": 1
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 8,
+        "dependency_addition": 24,
+        "permission_grant": 11,
+        "replacement": 12
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 396,
+        "observed": 534,
+        "precision": 0.6385767790262172,
+        "recall": 0.8611111111111112,
+        "true_positive": 341
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 31,
+          "four_to_nine": 101,
+          "one": 18,
+          "ten_or_more": 6,
+          "two_to_three": 36
+        },
+        "mean": 3.7916666666666665,
+        "median": 4.0
+      },
+      "task_count": 16
+    },
+    "permission_boundary_with_attractive_blocked_path": {
+      "P": {
+        "count": 7,
+        "rate": 0.036458333333333336
+      },
+      "P_ignore_extra_context_link": {
+        "count": 31,
+        "rate": 0.16145833333333334
+      },
+      "R": {
+        "count": 132,
+        "rate": 0.6875
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9751280371506066,
+        "entity_recall": 0.9751280371506066,
+        "exclusion_precision": 0.6822916666666666,
+        "exclusion_recall": 0.6822916666666666,
+        "relation_precision": 0.6375,
+        "relation_recall": 0.6536458333333334
+      },
+      "extra_relation_types": {
+        "action_precondition_establishment": 3,
+        "context_link": 252,
+        "dependency_addition": 1
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 60,
+        "dependency_addition": 12,
+        "replacement": 1
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 324,
+        "observed": 507,
+        "precision": 0.49506903353057197,
+        "recall": 0.7746913580246914,
+        "true_positive": 251
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 7,
+          "four_to_nine": 103,
+          "one": 30,
+          "ten_or_more": 10,
+          "two_to_three": 42
+        },
+        "mean": 5.661458333333333,
+        "median": 4.0
+      },
+      "task_count": 16
+    },
+    "protected_information_redaction_under_task_pressure": {
+      "P": {
+        "count": 0,
+        "rate": 0.0
+      },
+      "P_ignore_extra_context_link": {
+        "count": 26,
+        "rate": 0.13541666666666666
+      },
+      "R": {
+        "count": 133,
+        "rate": 0.6927083333333334
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9819238390852975,
+        "entity_recall": 0.9819238390852975,
+        "exclusion_precision": 0.8541666666666666,
+        "exclusion_recall": 0.8541666666666666,
+        "relation_precision": 0.6416666666666666,
+        "relation_recall": 0.71875
+      },
+      "extra_relation_types": {
+        "context_link": 213,
+        "dependency_addition": 1
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 36
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 312,
+        "observed": 490,
+        "precision": 0.563265306122449,
+        "recall": 0.8846153846153846,
+        "true_positive": 276
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "four_to_nine": 86,
+          "one": 25,
+          "ten_or_more": 7,
+          "two_to_three": 74
+        },
+        "mean": 4.25,
+        "median": 3.0
+      },
+      "task_count": 16
+    },
+    "requirement_overwrite_cumulative_active": {
+      "P": {
+        "count": 0,
+        "rate": 0.0
+      },
+      "P_ignore_extra_context_link": {
+        "count": 63,
+        "rate": 0.328125
+      },
+      "R": {
+        "count": 126,
+        "rate": 0.65625
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9815530678811929,
+        "entity_recall": 0.9815530678811929,
+        "exclusion_precision": 0.8854166666666666,
+        "exclusion_recall": 0.8854166666666666,
+        "relation_precision": 0.5213541666666667,
+        "relation_recall": 0.6510416666666666
+      },
+      "extra_relation_types": {
+        "context_link": 283
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 12,
+        "path_addition": 12,
+        "replacement": 14
+      },
+      "n": 192,
+      "parseable_rows": 192,
+      "relation_micro": {
+        "expected": 300,
+        "observed": 545,
+        "precision": 0.48073394495412847,
+        "recall": 0.8733333333333333,
+        "true_positive": 262
+      },
+      "rows": 192,
+      "semantic_error_count": {
+        "distribution": {
+          "four_to_nine": 62,
+          "one": 31,
+          "ten_or_more": 23,
+          "two_to_three": 76
+        },
+        "mean": 4.661458333333333,
+        "median": 3.0
+      },
+      "task_count": 16
+    }
+  },
+  "by_pool": {
+    "formal_heldout": {
+      "P": {
+        "count": 27,
+        "rate": 0.05625
+      },
+      "P_ignore_extra_context_link": {
+        "count": 91,
+        "rate": 0.18958333333333333
+      },
+      "R": {
+        "count": 334,
+        "rate": 0.6958333333333333
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9813998700630645,
+        "entity_recall": 0.9813998700630645,
+        "exclusion_precision": 0.7770833333333333,
+        "exclusion_recall": 0.7770833333333333,
+        "relation_precision": 0.6241666666666666,
+        "relation_recall": 0.71875
+      },
+      "extra_relation_types": {
+        "action_precondition_establishment": 3,
+        "context_link": 629,
+        "dependency_addition": 2
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 67,
+        "dependency_addition": 24,
+        "path_addition": 12,
+        "replacement": 15
+      },
+      "n": 480,
+      "parseable_rows": 480,
+      "relation_micro": {
+        "expected": 816,
+        "observed": 1332,
+        "precision": 0.524024024024024,
+        "recall": 0.8553921568627451,
+        "true_positive": 698
+      },
+      "rows": 480,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 27,
+          "four_to_nine": 266,
+          "one": 44,
+          "ten_or_more": 20,
+          "two_to_three": 123
+        },
+        "mean": 4.520833333333333,
+        "median": 4.0
+      },
+      "task_count": 40
+    },
+    "formal_main": {
+      "P": {
+        "count": 16,
+        "rate": 0.03333333333333333
+      },
+      "P_ignore_extra_context_link": {
+        "count": 132,
+        "rate": 0.275
+      },
+      "R": {
+        "count": 336,
+        "rate": 0.7
+      },
+      "component_macro_parseable": {
+        "entity_precision": 0.9807675214446048,
+        "entity_recall": 0.9807675214446048,
+        "exclusion_precision": 0.85,
+        "exclusion_recall": 0.85,
+        "relation_precision": 0.6131944444444445,
+        "relation_recall": 0.7069444444444445
+      },
+      "extra_relation_types": {
+        "context_link": 623,
+        "dependency": 1
+      },
+      "missing_relation_types": {
+        "action_precondition_establishment": 54,
+        "dependency_addition": 24,
+        "permission_grant": 11,
+        "replacement": 12
+      },
+      "n": 480,
+      "parseable_rows": 480,
+      "relation_micro": {
+        "expected": 816,
+        "observed": 1339,
+        "precision": 0.5339805825242718,
+        "recall": 0.8762254901960784,
+        "true_positive": 715
+      },
+      "rows": 480,
+      "semantic_error_count": {
+        "distribution": {
+          "exact": 16,
+          "four_to_nine": 203,
+          "one": 74,
+          "ten_or_more": 33,
+          "two_to_three": 154
+        },
+        "mean": 4.729166666666667,
+        "median": 3.0
+      },
+      "task_count": 40
+    }
+  },
+  "leave_one_out": {
+    "by_action_type": {
+      "allow_or_deny_operation": {
+        "P": {
+          "count": 36,
+          "rate": 0.046875
+        },
+        "P_ignore_extra_context_link": {
+          "count": 214,
+          "rate": 0.2786458333333333
+        },
+        "R": {
+          "count": 541,
+          "rate": 0.7044270833333334
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.981688281417014,
+          "entity_recall": 0.981688281417014,
+          "exclusion_precision": 0.8229166666666666,
+          "exclusion_recall": 0.8229166666666666,
+          "relation_precision": 0.5731336805555556,
+          "relation_recall": 0.6829427083333334
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 1,
+          "context_link": 1096,
+          "dependency_addition": 1
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 72,
+          "dependency_addition": 36,
+          "path_addition": 12,
+          "replacement": 27
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1224,
+          "observed": 2175,
+          "precision": 0.49517241379310345,
+          "recall": 0.8799019607843137,
+          "true_positive": 1077
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 36,
+            "four_to_nine": 348,
+            "one": 114,
+            "ten_or_more": 49,
+            "two_to_three": 221
+          },
+          "mean": 4.631510416666667,
+          "median": 4.0
+        }
+      },
+      "apply_current_bundle": {
+        "P": {
+          "count": 40,
+          "rate": 0.052083333333333336
+        },
+        "P_ignore_extra_context_link": {
+          "count": 154,
+          "rate": 0.20052083333333334
+        },
+        "R": {
+          "count": 482,
+          "rate": 0.6276041666666666
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9776738010895997,
+          "entity_recall": 0.9776738010895997,
+          "exclusion_precision": 0.8411458333333334,
+          "exclusion_recall": 0.8411458333333334,
+          "relation_precision": 0.6756076388888889,
+          "relation_recall": 0.7973090277777778
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 3,
+          "context_link": 928,
+          "dependency": 1,
+          "dependency_addition": 1
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 73,
+          "dependency_addition": 36,
+          "path_addition": 12,
+          "permission_grant": 11,
+          "replacement": 27
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1428,
+          "observed": 2202,
+          "precision": 0.5762942779291553,
+          "recall": 0.8886554621848739,
+          "true_positive": 1269
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 40,
+            "four_to_nine": 410,
+            "one": 83,
+            "ten_or_more": 53,
+            "two_to_three": 182
+          },
+          "mean": 5.013020833333333,
+          "median": 4.0
+        }
+      },
+      "migrate_to_allowed_path": {
+        "P": {
+          "count": 21,
+          "rate": 0.02734375
+        },
+        "P_ignore_extra_context_link": {
+          "count": 173,
+          "rate": 0.22526041666666666
+        },
+        "R": {
+          "count": 502,
+          "rate": 0.6536458333333334
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.979967133721474,
+          "entity_recall": 0.979967133721474,
+          "exclusion_precision": 0.8059895833333334,
+          "exclusion_recall": 0.8059895833333334,
+          "relation_precision": 0.5879340277777778,
+          "relation_recall": 0.6579861111111112
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 3,
+          "context_link": 1048,
+          "dependency": 1,
+          "dependency_addition": 2
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 109,
+          "dependency_addition": 48,
+          "permission_grant": 11,
+          "replacement": 25
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1236,
+          "observed": 2097,
+          "precision": 0.497377205531712,
+          "recall": 0.8438511326860841,
+          "true_positive": 1043
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 21,
+            "four_to_nine": 409,
+            "one": 106,
+            "ten_or_more": 51,
+            "two_to_three": 181
+          },
+          "mean": 4.872395833333333,
+          "median": 4.0
+        }
+      },
+      "replace_current_object": {
+        "P": {
+          "count": 43,
+          "rate": 0.055989583333333336
+        },
+        "P_ignore_extra_context_link": {
+          "count": 223,
+          "rate": 0.2903645833333333
+        },
+        "R": {
+          "count": 670,
+          "rate": 0.8723958333333334
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9876395298053284,
+          "entity_recall": 0.9876395298053284,
+          "exclusion_precision": 0.7942708333333334,
+          "exclusion_recall": 0.7942708333333334,
+          "relation_precision": 0.5853298611111111,
+          "relation_recall": 0.6677517361111112
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 3,
+          "context_link": 1056,
+          "dependency": 1,
+          "dependency_addition": 2
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 121,
+          "dependency_addition": 24,
+          "path_addition": 12,
+          "permission_grant": 11,
+          "replacement": 2
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1212,
+          "observed": 2104,
+          "precision": 0.49524714828897337,
+          "recall": 0.8597359735973598,
+          "true_positive": 1042
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 43,
+            "four_to_nine": 322,
+            "one": 118,
+            "ten_or_more": 8,
+            "two_to_three": 277
+          },
+          "mean": 3.6666666666666665,
+          "median": 3.0
+        }
+      },
+      "select_current_interface": {
+        "P": {
+          "count": 32,
+          "rate": 0.041666666666666664
+        },
+        "P_ignore_extra_context_link": {
+          "count": 128,
+          "rate": 0.16666666666666666
+        },
+        "R": {
+          "count": 485,
+          "rate": 0.6315104166666666
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9784497327357571,
+          "entity_recall": 0.9784497327357571,
+          "exclusion_precision": 0.8033854166666666,
+          "exclusion_recall": 0.8033854166666666,
+          "relation_precision": 0.6713975694444444,
+          "relation_recall": 0.7582465277777778
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 2,
+          "context_link": 880,
+          "dependency": 1,
+          "dependency_addition": 2
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 109,
+          "dependency_addition": 48,
+          "path_addition": 12,
+          "permission_grant": 11,
+          "replacement": 27
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1428,
+          "observed": 2106,
+          "precision": 0.5797720797720798,
+          "recall": 0.8550420168067226,
+          "true_positive": 1221
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 32,
+            "four_to_nine": 387,
+            "one": 51,
+            "ten_or_more": 51,
+            "two_to_three": 247
+          },
+          "mean": 4.94140625,
+          "median": 4.0
+        }
+      }
+    },
+    "by_family": {
+      "api_migration_state_transition": {
+        "P": {
+          "count": 38,
+          "rate": 0.049479166666666664
+        },
+        "P_ignore_extra_context_link": {
+          "count": 169,
+          "rate": 0.22005208333333334
+        },
+        "R": {
+          "count": 534,
+          "rate": 0.6953125
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9810118849289856,
+          "entity_recall": 0.9810118849289856,
+          "exclusion_precision": 0.81640625,
+          "exclusion_recall": 0.81640625,
+          "relation_precision": 0.6341145833333334,
+          "relation_recall": 0.7120225694444444
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 3,
+          "context_link": 940,
+          "dependency": 1,
+          "dependency_addition": 2
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 116,
+          "dependency_addition": 36,
+          "path_addition": 12,
+          "permission_grant": 11,
+          "replacement": 27
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1332,
+          "observed": 2076,
+          "precision": 0.5443159922928709,
+          "recall": 0.8483483483483484,
+          "true_positive": 1130
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 38,
+            "four_to_nine": 352,
+            "one": 104,
+            "ten_or_more": 46,
+            "two_to_three": 228
+          },
+          "mean": 4.591145833333333,
+          "median": 4.0
+        }
+      },
+      "decoy_heavy_same_prefix_config": {
+        "P": {
+          "count": 12,
+          "rate": 0.015625
+        },
+        "P_ignore_extra_context_link": {
+          "count": 174,
+          "rate": 0.2265625
+        },
+        "R": {
+          "count": 527,
+          "rate": 0.6861979166666666
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9799939707925819,
+          "entity_recall": 0.9799939707925819,
+          "exclusion_precision": 0.8059895833333334,
+          "exclusion_recall": 0.8059895833333334,
+          "relation_precision": 0.5893663194444444,
+          "relation_recall": 0.6848958333333334
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 3,
+          "context_link": 1060,
+          "dependency_addition": 2
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 113,
+          "dependency_addition": 24,
+          "path_addition": 12,
+          "replacement": 15
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1236,
+          "observed": 2137,
+          "precision": 0.5016378100140384,
+          "recall": 0.8673139158576052,
+          "true_positive": 1072
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 12,
+            "four_to_nine": 368,
+            "one": 100,
+            "ten_or_more": 47,
+            "two_to_three": 241
+          },
+          "mean": 4.833333333333333,
+          "median": 4.0
+        }
+      },
+      "permission_boundary_with_attractive_blocked_path": {
+        "P": {
+          "count": 36,
+          "rate": 0.046875
+        },
+        "P_ignore_extra_context_link": {
+          "count": 192,
+          "rate": 0.25
+        },
+        "R": {
+          "count": 538,
+          "rate": 0.7005208333333334
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9825726104046416,
+          "entity_recall": 0.9825726104046416,
+          "exclusion_precision": 0.8463541666666666,
+          "exclusion_recall": 0.8463541666666666,
+          "relation_precision": 0.6139756944444444,
+          "relation_recall": 0.7276475694444444
+        },
+        "extra_relation_types": {
+          "context_link": 1000,
+          "dependency": 1,
+          "dependency_addition": 1
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 61,
+          "dependency_addition": 36,
+          "path_addition": 12,
+          "permission_grant": 11,
+          "replacement": 26
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1308,
+          "observed": 2164,
+          "precision": 0.5369685767097967,
+          "recall": 0.8883792048929664,
+          "true_positive": 1162
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 36,
+            "four_to_nine": 366,
+            "one": 88,
+            "ten_or_more": 43,
+            "two_to_three": 235
+          },
+          "mean": 4.365885416666667,
+          "median": 4.0
+        }
+      },
+      "protected_information_redaction_under_task_pressure": {
+        "P": {
+          "count": 43,
+          "rate": 0.055989583333333336
+        },
+        "P_ignore_extra_context_link": {
+          "count": 197,
+          "rate": 0.2565104166666667
+        },
+        "R": {
+          "count": 537,
+          "rate": 0.69921875
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.980873659920969,
+          "entity_recall": 0.980873659920969,
+          "exclusion_precision": 0.8033854166666666,
+          "exclusion_recall": 0.8033854166666666,
+          "relation_precision": 0.6129340277777777,
+          "relation_recall": 0.7113715277777778
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 3,
+          "context_link": 1039,
+          "dependency": 1,
+          "dependency_addition": 1
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 85,
+          "dependency_addition": 48,
+          "path_addition": 12,
+          "permission_grant": 11,
+          "replacement": 27
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1320,
+          "observed": 2181,
+          "precision": 0.5213204951856947,
+          "recall": 0.8613636363636363,
+          "true_positive": 1137
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 43,
+            "four_to_nine": 383,
+            "one": 93,
+            "ten_or_more": 46,
+            "two_to_three": 203
+          },
+          "mean": 4.71875,
+          "median": 4.0
+        }
+      },
+      "requirement_overwrite_cumulative_active": {
+        "P": {
+          "count": 43,
+          "rate": 0.055989583333333336
+        },
+        "P_ignore_extra_context_link": {
+          "count": 160,
+          "rate": 0.20833333333333334
+        },
+        "R": {
+          "count": 544,
+          "rate": 0.7083333333333334
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9809663527219951,
+          "entity_recall": 0.9809663527219951,
+          "exclusion_precision": 0.7955729166666666,
+          "exclusion_recall": 0.7955729166666666,
+          "relation_precision": 0.6430121527777778,
+          "relation_recall": 0.7282986111111112
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 3,
+          "context_link": 969,
+          "dependency": 1,
+          "dependency_addition": 2
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 109,
+          "dependency_addition": 48,
+          "permission_grant": 11,
+          "replacement": 13
+        },
+        "n": 768,
+        "parseable_rows": 768,
+        "relation_micro": {
+          "expected": 1332,
+          "observed": 2126,
+          "precision": 0.5413922859830668,
+          "recall": 0.8641141141141141,
+          "true_positive": 1151
+        },
+        "rows": 768,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 43,
+            "four_to_nine": 407,
+            "one": 87,
+            "ten_or_more": 30,
+            "two_to_three": 201
+          },
+          "mean": 4.615885416666667,
+          "median": 4.0
+        }
+      }
+    },
+    "by_pool": {
+      "formal_heldout": {
+        "P": {
+          "count": 16,
+          "rate": 0.03333333333333333
+        },
+        "P_ignore_extra_context_link": {
+          "count": 132,
+          "rate": 0.275
+        },
+        "R": {
+          "count": 336,
+          "rate": 0.7
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9807675214446048,
+          "entity_recall": 0.9807675214446048,
+          "exclusion_precision": 0.85,
+          "exclusion_recall": 0.85,
+          "relation_precision": 0.6131944444444445,
+          "relation_recall": 0.7069444444444445
+        },
+        "extra_relation_types": {
+          "context_link": 623,
+          "dependency": 1
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 54,
+          "dependency_addition": 24,
+          "permission_grant": 11,
+          "replacement": 12
+        },
+        "n": 480,
+        "parseable_rows": 480,
+        "relation_micro": {
+          "expected": 816,
+          "observed": 1339,
+          "precision": 0.5339805825242718,
+          "recall": 0.8762254901960784,
+          "true_positive": 715
+        },
+        "rows": 480,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 16,
+            "four_to_nine": 203,
+            "one": 74,
+            "ten_or_more": 33,
+            "two_to_three": 154
+          },
+          "mean": 4.729166666666667,
+          "median": 3.0
+        }
+      },
+      "formal_main": {
+        "P": {
+          "count": 27,
+          "rate": 0.05625
+        },
+        "P_ignore_extra_context_link": {
+          "count": 91,
+          "rate": 0.18958333333333333
+        },
+        "R": {
+          "count": 334,
+          "rate": 0.6958333333333333
+        },
+        "component_macro_parseable": {
+          "entity_precision": 0.9813998700630645,
+          "entity_recall": 0.9813998700630645,
+          "exclusion_precision": 0.7770833333333333,
+          "exclusion_recall": 0.7770833333333333,
+          "relation_precision": 0.6241666666666666,
+          "relation_recall": 0.71875
+        },
+        "extra_relation_types": {
+          "action_precondition_establishment": 3,
+          "context_link": 629,
+          "dependency_addition": 2
+        },
+        "missing_relation_types": {
+          "action_precondition_establishment": 67,
+          "dependency_addition": 24,
+          "path_addition": 12,
+          "replacement": 15
+        },
+        "n": 480,
+        "parseable_rows": 480,
+        "relation_micro": {
+          "expected": 816,
+          "observed": 1332,
+          "precision": 0.524024024024024,
+          "recall": 0.8553921568627451,
+          "true_positive": 698
+        },
+        "rows": 480,
+        "semantic_error_count": {
+          "distribution": {
+            "exact": 27,
+            "four_to_nine": 266,
+            "one": 44,
+            "ten_or_more": 20,
+            "two_to_three": 123
+          },
+          "mean": 4.520833333333333,
+          "median": 4.0
+        }
+      }
+    }
+  }
+}

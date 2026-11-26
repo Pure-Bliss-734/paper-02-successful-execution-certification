@@ -1,0 +1,36 @@
+[
+  {
+    "event_mentions_entity": false,
+    "M": {
+      "comparison_success": 0,
+      "intact_success": 32,
+      "n_pairs": 36,
+      "intact_success_comparison_failure": 32,
+      "intact_failure_comparison_success": 0
+    },
+    "E": {
+      "comparison_success": 32,
+      "intact_success": 32,
+      "n_pairs": 36,
+      "intact_success_comparison_failure": 0,
+      "intact_failure_comparison_success": 0
+    }
+  },
+  {
+    "event_mentions_entity": true,
+    "M": {
+      "comparison_success": 1,
+      "intact_success": 8,
+      "n_pairs": 24,
+      "intact_success_comparison_failure": 7,
+      "intact_failure_comparison_success": 0
+    },
+    "E": {
+      "comparison_success": 1,
+      "intact_success": 8,
+      "n_pairs": 24,
+      "intact_success_comparison_failure": 7,
+      "intact_failure_comparison_success": 0
+    }
+  }
+]

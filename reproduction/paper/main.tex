@@ -1,0 +1,1273 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+
+% This file is self-contained apart from the seven existing figure files.
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\graphicspath{{figures/}{appendix_figures/}{./}}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0pt}
+\setlist{nosep,leftmargin=*}
+\captionsetup{font=small,labelfont=bf}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcommand{\Rsupport}{R}
+\newcommand{\Pstrict}{P}
+\newcommand{\Pnoctx}{P_{\mathrm{no\mbox{-}ctx}}}
+\newcommand{\Maction}{M}
+\newcommand{\Eoutcome}{E}
+\newcommand{\nonzero}{\Delta\neq 0}
+\newcommand{\zerodelta}{\Delta=0}
+\newcommand{\pp}{\,\mathrm{pp}}
+
+% Figures are required release inputs. A missing file must stop compilation.
+\newcommand{\PaperGraphic}[2]{%
+  \includegraphics[width=#2\linewidth]{#1.pdf}}
+
+\title{What Does Successful Execution Certify?\\
+\large An Executable Decomposition of LLM-Agent Handoffs}
+\author{Jiangwei Xue\\
+Independent Researcher\\
+\href{mailto:jiangwei.xue@outlook.com}{jiangwei.xue@outlook.com}\\
+\href{https://doi.org/10.5281/zenodo.22668198}{DOI: 10.5281/zenodo.22668198}}
+\date{September 11, 2026}
+
+\hypersetup{
+  pdftitle={What Does Successful Execution Certify? An Executable Decomposition of LLM-Agent Handoffs},
+  pdfauthor={Jiangwei Xue},
+  pdfsubject={Executable evaluation of state carried across LLM-agent handoffs},
+  pdfkeywords={LLM agents, agent handoffs, carried state, executable evaluation, state fidelity}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Agent benchmarks often treat terminal success as evidence that the state carried across a handoff was adequate. We study which properties of that state a successful execution supports. Our protocol makes the handoff boundary observable: Stage~1 reconstructs a structured state from an event history; an isolated Stage~2 receives only that state and a complete action contract; and a deterministic executor applies the resulting action. Each episode records strict global state fidelity, immediate action support, structured-action correctness, and executed outcome. Across 80 controlled tasks, strict global fidelity is 5.8\%, while immediate support is 72.5\%. On a matched three-model subset, 164 of 180 executions succeed. Among those successes, strict global fidelity holds in 3.7\%, immediate support in 72.0\%, and immediate support in 93.8\% of state-changing runs. Ignoring unsupported generic links raises success-conditioned global fidelity to 18.3\%, still well below local support. Gold-state substitution gives modest downstream gains with task-cluster intervals spanning zero. Deleting one required state bundle from otherwise intact gold state reduces action accuracy from 40/60 to 1/60. A separate 106-pair natural-error repair experiment does not show aggregate improvement; the 43-pair subgroup that restores complete immediate support is also inconclusive, with wide intervals. The results separate three claims that a single success label can blur: global state fidelity, contract-defined support for the current action, and the behavioral effect of changing the supplied state. Successful execution has high local-support coverage on informative transitions, yet remains a weak certificate of the complete carried state.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+A handoff produces both an immediate transition and a state for future use. The two can diverge. A migration may reach the correct endpoint while the carried state still marks the retired interface as current. The present action succeeds, but the successor receives an inaccurate account of the system.
+
+A terminal success label cannot distinguish this case from a faithful handoff. It establishes that the benchmark reached a target condition under its executor. It does not reveal which information crossed the handoff boundary, whether that information was complete, or whether omitted facts were simply irrelevant to the tested transition. As executable benchmarks have made task completion measurable across web, desktop, software, and tool-use settings \citep{liu2024agentbench,zhou2024webarena,drouin2024workarena,xie2024osworld,jimenez2024swebench,trivedi2024appworld,yao2025taubench}, the evidential meaning of success has become an evaluation question in its own right.
+
+This paper asks: \emph{what does successful execution certify about the state that produced it?} We distinguish three levels. A successful run verifies the realized transition under the benchmark executor. It may coincide with a carried state that supports the immediate action. It need not certify the fidelity of the full state passed forward. Throughout the paper, an \emph{empirical certificate rate} is a benchmark-conditional frequency. It is neither a formal guarantee nor a causal effect.
+
+We make the handoff boundary observable. Stage~1 reads an event history and emits an answer and carried state. Stage~2 receives only the carried state and a complete structured action contract; it cannot inspect the history or the Stage~1 answer. A deterministic executor applies the structured action. The same episode yields four endpoints: strict global state fidelity (\(\Pstrict\)), immediate action support (\(\Rsupport\)), structured-action accuracy (\(\Maction\)), and executed outcome success (\(\Eoutcome\)).
+
+The matched natural-state evaluation contains 180 rows over 20 tasks and three model families. Of 164 successful executions, only 6 carry a strictly exact global state. Immediate support holds in 118, and in 90 of the 96 successful runs whose expected transition changes the environment. These quantities form a clear scope hierarchy: success-conditioned coverage is low for the full carried state and high for the local action surface on state-changing tasks. No-change outcomes are less diagnostic because they can pass without exercising the fields that distinguish an admissible action from an inadmissible one.
+
+The controls sharpen the interpretation. Gold-state substitution leaves residual action-generation error and yields uncertain aggregate gains. A destructive intervention removes one selected required bundle from otherwise intact gold state and sharply reduces action accuracy. A complementary restorative intervention repairs one naturally occurring action-relevant defect while preserving the rest of the natural state. Across 106 paired rows, this one-bundle repair does not improve action or outcome accuracy in aggregate. The same conclusion holds in the 43 pairs where the repair changes \(\Rsupport\) from 0 to 1. Thus, contract-defined support, causal disruption under deletion, and behavioral recovery under local repair are distinct properties.
+
+The paper makes three contributions:
+\begin{enumerate}
+    \item an executable state-only handoff protocol that isolates the downstream call from both the original history and the predecessor's answer while recording \(\Pstrict\), \(\Rsupport\), \(\Maction\), and \(\Eoutcome\) on the same episode;
+    \item a success-conditioned certification analysis that separates global fidelity from immediate support, isolates state-changing and no-change transitions, and tests comparator sensitivity; and
+    \item gold-state controls, destructive and restorative supplied-state interventions, a cross-snapshot replay bridge, bounded-update tasks, and a repository-derived positive control that separate reconstruction, action generation, state dependence, restorative sufficiency, and output capacity.
+\end{enumerate}
+
+\paragraph{Version provenance.}
+The original evaluation protocol, experiments, and principal findings precede the success-conditioned reanalysis, the natural-error repair experiment, and the DeepSeek serving-regime bridge. The original and later runs retain separate manifests and are not pooled.
+
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Memory systems and carried state}
+
+LLM-agent memory research has moved from persistent stores and reflective traces toward benchmarks that test retention, updating, and use. MemGPT treats context management as an operating-system-like memory problem \citep{packer2023memgpt}; Generative Agents, Reflexion, and MemoryBank maintain experience or reflection artifacts that influence later behavior \citep{park2023generative,shinn2023reflexion,zhong2024memorybank}. LoCoMo and LongMemEval evaluate long-context conversational memory, while MemoryAgentBench stresses incremental multi-turn updates \citep{maharana2024locomo,wu2025longmemeval,hu2025memoryagentbench}. Recent benchmarks expose the retained object or its downstream use more directly: MEMPROBE reconstructs hidden user state from an agent's memory, MemTrace follows typed knowledge points across changing states, Mem2ActBench evaluates whether memory is grounded into later tool actions, and StructMem emphasizes event bindings and cross-event relations \citep{ma2026memprobe,long2026memtrace,shen2026mem2act,xu2026structmem}. Our setting isolates one operational state crossing one explicit handoff and audits it against both a global contract and the requirements of one downstream action.
+
+\subsection{Multi-agent communication and handoffs}
+
+Multi-agent frameworks established message passing, role specialization, and explicit coordination as central design patterns. CAMEL studies role-playing communication; AutoGen makes multi-agent conversation programmable; AgentVerse studies collaborative groups; MetaGPT encodes role-specific procedures; ChatDev coordinates software-development roles through dialogue; and Magentic-One delegates work through an orchestrator \citep{li2023camel,wu2024autogen,chen2024agentverse,hong2024metagpt,qian2024chatdev,fourney2024magenticone}. These systems motivate the interface problem but do not define the semantic state a successor must receive.
+
+Recent work targets that boundary more directly. Facts Without Rules studies the loss of boundary metadata under handoff compression, and StateBind separates visibility, binding construction, and downstream executability \citep{wang2026facts,fu2026statebind}. Handoff Debt measures rediscovery cost under repository, trace, summary, and structured-note views; PACT projects inter-agent messages into compact action-state records \citep{kc2026handoffdebt,huang2026pact}. AstronOS carries versioned authoritative state into fresh sessions, while Handoff Tax studies continuation under model switches and trajectory-transfer policies \citep{nie2026astronos,ganz2026handofftax}. A complementary theory of session handover distinguishes exact recovery from task-relative predictive sufficiency \citep{kato2026handover}. When ``Must'' Becomes ``Maybe'' shows that handoff transformations can retain content while weakening its binding force on downstream action \citep{sun2026mustmaybe}. Our protocol fixes the downstream action contract and executor, then records full-state fidelity, local support, action correctness, and terminal outcome on the same episode.
+
+\subsection{Tool use, structured actions, and action assurance}
+
+Tool-use research asks whether models choose tools and ground arguments correctly. ReAct interleaves reasoning and action, while Toolformer trains models to insert API calls \citep{yao2023react,schick2023toolformer}. API-Bank, Gorilla/APIBench, ToolLLM/ToolBench, and the Berkeley Function Calling Leaderboard broaden executable and syntax-aware evaluation of tool selection and argument generation \citep{li2023apibank,patil2024gorilla,qin2024toolllm,patil2025bfcl}. ToolSandbox adds conversational state and dynamic tool dependencies \citep{lu2024toolsandbox}. WirelessOptBench places a related support check at the execution boundary by varying telemetry state and repairing recoverable dependencies before authorization \citep{lu2026wirelessops}. Our endpoint \(\Maction\) belongs to this lineage, while the main question begins one step upstream: what state was supplied to action generation, and what can the resulting success certify about it?
+
+\subsection{Executable agent evaluation beyond terminal success}
+
+AgentBench and GAIA evaluate broad interactive and tool-using abilities \citep{liu2024agentbench,mialon2024gaia}. WebShop, WebArena, Mind2Web, VisualWebArena, BrowserGym, WorkArena, and AssistantBench make web interaction measurable across simulated, self-hosted, open-web, and multimodal settings \citep{yao2022webshop,zhou2024webarena,deng2023mind2web,koh2024visualwebarena,lesellier2025browsergym,drouin2024workarena,yoran2024assistantbench}; OSWorld extends executable evaluation to general computer environments \citep{xie2024osworld}. SWE-bench evaluates repository-level issue resolution, while AppWorld and \(\tau\)-bench evaluate application and tool-agent-user outcomes \citep{jimenez2024swebench,trivedi2024appworld,yao2025taubench}. AgentBoard records intermediate progress, CORE evaluates full tool paths, and ProcBench scores process-level defects and control preservation \citep{ma2024agentboard,michelakis2025core,he2026procbench}. \citet{kapoor2025agentsmatter} likewise emphasize evaluation design, reproducibility, and meaningful comparison. Our intermediate object is the semantic state carried across an isolated handoff, linked directly to the action and terminal state produced from it.
+
+\subsection{Structured state tracking and component diagnosis}
+
+Task-oriented dialogue offers an earlier line of work in which latent interaction state is explicit. MultiWOZ and TRADE established multi-domain dialogue-state tracking benchmarks and transferable state generation \citep{budzianowski2018multiwoz,wu2019trade}. The Schema-Guided Dialogue dataset expands tracking to dynamic schemas and unseen services; TripPy follows values through span and copy mechanisms; SimpleTOD jointly models state, action, and response; and ConvLab-2 supports end-to-end evaluation with component diagnosis \citep{rastogi2020sgd,heck2020trippy,hossein2020simpletod,zhu2020convlab}. The state in our benchmark is operational rather than conversational, but the methodological lesson carries over: end-to-end success and state representation answer different questions.
+
+\section{Executable State-Only Evaluation}
+\label{sec:method}
+
+\subsection{Observable handoff boundary}
+
+Let \(H\) be the model-visible history, \(\hat a\) the Stage~1 answer, \(\hat s\) the carried state, \(S_{\mathrm{act}}\) the complete action schema, \(\hat u\) the Stage~2 action, and \(w\) the pre-action environment. The protocol is
+\begin{equation}
+(\hat a,\hat s)=F_\theta(H),\qquad
+\hat u=G_\theta(\hat s;S_{\mathrm{act}}),\qquad
+\hat w'=\operatorname{Exec}(w,\hat u).
+\label{eq:protocol}
+\end{equation}
+Stage~2 receives \(\hat s\) and the action contract. It does not receive \(H\) or \(\hat a\). Any historical information available to the downstream call must cross the handoff in \(\hat s\). The contract names every field consumed by execution without revealing its gold value.
+
+\begin{enumerate}
+    \item Stage~1 reads the visible history and emits an answer and carried state.
+    \item Only the carried state crosses the handoff boundary.
+    \item Stage~2 emits a structured action under the complete action schema.
+    \item A deterministic executor applies the action, allowing all four endpoints to be recorded on the same episode.
+\end{enumerate}
+
+\begin{figure}[t]
+    \centering
+    \PaperGraphic{figure1_state_only_handoff}{1.0}
+    \caption{State-only executable handoff. Stage~1 reads the event history and emits an answer and carried state. Only the state crosses the boundary. Stage~2 produces a structured action under a complete contract, and a deterministic executor applies it to the pre-action environment.}
+    \label{fig:protocol}
+\end{figure}
+
+\begin{table}[t]
+\centering
+\caption{Four endpoints recorded on each handoff episode.}
+\label{tab:endpoints}
+\small
+\begin{tabularx}{\linewidth}{@{}c l Y@{}}
+\toprule
+Symbol & Measure & Evaluation question \\
+\midrule
+\(\Pstrict\) & Strict global state fidelity & Does the carried state exactly match all prompt-visible entity facts, semantic relation tuples, and exclusions? \\
+\(\Rsupport\) & Immediate action support & Does the state contain the exact entity fields and critical relations declared by the current action-support contract? \\
+\(\Maction\) & Structured-action accuracy & Does Stage~2 emit the complete correct action under the final schema? \\
+\(\Eoutcome\) & Executed outcome success & Does deterministic execution reach the correct operational terminal state without a forbidden side effect? \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{State, action, and outcome endpoints}
+
+\Cref{tab:endpoints} defines the main endpoints. Strict fidelity \(\Pstrict\) uses semantic set equality over prompt-visible entity facts, relation tuples, and exclusions. The strict comparator counts every unsupported relation as an error, including a generic \texttt{context\_link}. We therefore report \(\Pnoctx\), which ignores only extra generic \texttt{context\_link} edges while retaining missing relations, task-specific extra relations, lifecycle mismatches, and exclusion errors.
+
+Immediate support \(\Rsupport\) checks the exact lifecycle fields of action endpoints and every critical relation declared by the frozen action-support contract. The word \emph{required} refers to this contract. It does not assume that the declared fields form a behaviorally sufficient statistic for every model call. Action accuracy \(\Maction\) compares the complete structured action with the unique gold action. Outcome success \(\Eoutcome\) requires executor acceptance, the correct terminal state, and no forbidden side effect.
+
+For a state property \(Y\in\{\Pstrict,\Pnoctx,\Rsupport\}\), define the empirical success-conditioned certificate rate
+\begin{equation}
+C_Y=\Pr(Y=1\mid \Eoutcome=1).
+\label{eq:certificate}
+\end{equation}
+For immediate support we also report
+\begin{equation}
+C_{\Rsupport}^{\nonzero}=\Pr(\Rsupport=1\mid \Eoutcome=1,\nonzero),
+\label{eq:certificate_nonzero}
+\end{equation}
+where \(\nonzero\) denotes an expected operational state change. These rates describe coverage among successful benchmark runs. They do not measure causal effects or distribution-free guarantees.
+
+\subsection{Controlled tasks, models, and run design}
+
+The controlled benchmark contains two independently seeded pools of 40 tasks. Histories contain 6--10 visible events over 7--11 objects and instantiate five families: API migration, near-name configuration decoys, permission boundaries, protected-information exclusion, and cumulative requirement updates. The next action is one of five types: allow or deny an operation, apply a current bundle, migrate to an allowed path, replace a current object, or select a current interface. Each task fixes an initial environment, ordered event history, gold state, action-required facts, unique structured action, expected environment delta, and forbidden side effects.
+
+DeepSeek-V4-Flash was evaluated on all 80 tasks in the original controlled matrix. Qwen3.7-Max-2026-06-08 and GLM-5.2 were evaluated on a preselected matched 20-task subset. The main cross-model natural-state analysis therefore contains 180 rows: 20 tasks, three models, and three repeats. Original model calls were acquired from July~21 through July~29, 2026 UTC. Temperature was zero, explicit reasoning was disabled, and no tools, retrieval, or web access were available. Provider routes, requested and returned identifiers, attempts, and retry outcomes were retained.
+
+Diagnostic conditions compare natural text state with structured JSON state, a blind review pass, and category-only checker feedback. The main claims use natural-state rows and the corrected complete action schema. The appendix reports the remaining schedules and denominators.
+
+\subsection{Controls and supplied-state interventions}
+\label{sec:interventions_method}
+
+The evaluation separates several possible sources of error.
+
+\paragraph{Gold-state substitution.}
+Stage~2 receives either the model-produced state or the corresponding gold state under the same complete action contract. This contrast separates reconstruction error from residual action-generation error.
+
+\paragraph{Destructive supplied-state intervention.}
+Starting from gold state, one selected action-required entity record is deleted together with its incident required relations and exclusions. The future event, requested action, schema, executor, validators, model configuration, and all other state content remain fixed. Two additional controls flip one action-relevant Boolean field or perturb unrelated state under symbolic preflight constraints.
+
+\paragraph{Natural-error repair.}
+The restorative experiment begins from archived natural-state rows with incomplete immediate support. Candidate selection and repair construction do not use historical \(\Maction\) or \(\Eoutcome\). A deterministic offline procedure selects one naturally defective action-required bundle and makes the smallest admissible repair while preserving the remaining natural state, including unrelated errors. Both arms are called contemporaneously: arm~A replays the archived natural state, and arm~B supplies the one-bundle repair. The primary population contains 106 paired rows over 30 tasks. In 43 pairs, the selected edit completes the action-support contract, giving \(\Rsupport:0\to1\); 63 repaired states remain incomplete because other required defects persist.
+
+\paragraph{DeepSeek serving-regime bridge.}
+The original DeepSeek calls preceded a July~31 provider update to the mutable \texttt{deepseek-v4-flash} alias \citep{deepseek2026changelog}. We therefore keep the historical and current regimes separate. Eighteen exact historical Stage~2 requests are replayed under the currently served alias. The 20-task DeepSeek component of the destructive intervention is also repeated with the frozen gold and deletion inputs. The bridge assesses fixed-input agreement and replication of the qualitative deletion effect; no cross-regime rows are pooled.
+
+\subsection{Statistical analysis and run boundaries}
+
+The task is the unit of generalization. Row rates describe the recorded evaluation set. Task-cluster bootstrap intervals use 20,000 resamples and retain every repeat, condition, model observation, and paired arm attached to each sampled task. Within-run contingency tables compare endpoints on the same rows. Paired interventions report rescue, harm, and tie counts together with exact two-sided McNemar diagnostics.
+
+The later intervention runs retain separate manifests and remain outside the original denominators. Transport, closure, and run-inclusion diagnostics are reported in \cref{app:new_results}.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Successful state-changing executions have high immediate-support coverage}
+\label{sec:coverage}
+
+\Cref{tab:matched} reports the matched natural-state surface. The comparison tests whether the measurement pattern repeats across model families; it is not a provider ranking.
+
+\begin{table}[t]
+\centering
+\caption{Matched natural-state results on the same 20 tasks, with three repeats per model.}
+\label{tab:matched}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Model & Strict \(\Pstrict\) & Support \(\Rsupport\) & Action \(\Maction\) & Outcome \(\Eoutcome\) \\
+\midrule
+DeepSeek-V4-Flash & 6/60 & 42/60 & 51/60 & 55/60 \\
+Qwen3.7-Max & 0/60 & 42/60 & 51/60 & 54/60 \\
+GLM-5.2 & 0/60 & 37/60 & 52/60 & 55/60 \\
+\midrule
+All & 6/180 & 121/180 & 154/180 & 164/180 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Among the 96 successful rows whose expected transition changes the environment, 90 carry complete immediate support:
+\[
+C_{\Rsupport}^{\nonzero}=90/96=93.8\%.
+\]
+Across all 164 successful rows, immediate support holds in 118, giving \(C_{\Rsupport}=72.0\%\). Strict global fidelity holds in only 6, giving \(C_{\Pstrict}=3.7\%\). Ignoring extra generic links raises the global rate to \(C_{\Pnoctx}=18.3\%\). \Cref{tab:certificate} gives the exact counts.
+
+\begin{table}[t]
+\centering
+\caption{Success-conditioned empirical certificate profile on matched natural-state rows.}
+\label{tab:certificate}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+State property among successful runs & Count & Rate \\
+\midrule
+Strict global fidelity \(\Pstrict\) & 6/164 & 3.7\% \\
+Global fidelity \(\Pnoctx\) & 30/164 & 18.3\% \\
+Immediate action support \(\Rsupport\) & 118/164 & 72.0\% \\
+Immediate support, \(\nonzero\) & 90/96 & 93.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+    \centering
+    \PaperGraphic{figure2_certificate_profile}{0.88}
+    \caption{Success-conditioned certification profile. The same successful outcomes have low full-state exactness, higher local-support coverage, and nearly complete support coverage on state-changing transitions.}
+    \label{fig:certificate}
+\end{figure}
+
+The state-changing rate is a coverage statement. Immediate support is also common in the full state-changing population (93/99, 93.9\%), so observing success produces little change in that base rate. The result says that nearly every successful state-changing run satisfies the local contract; it does not imply that success sharply discriminates supported from unsupported states.
+
+No-change successes form a different regime. Of 68 successful \(\zerodelta\) rows, only 28 satisfy \(\Rsupport\) (41.2\%). A correct denial, refusal, or already-satisfied operation can pass the terminal check without exercising all fields required to distinguish alternative actions.
+
+\subsection{Same-run discordance contracts from global fidelity to local support}
+
+\Cref{tab:contingency} compares the outcome and state endpoints on the same rows. For \((\Eoutcome,\Pstrict)\), 158 successful executions carry a non-exact state, while only 6 carry an exact one. Replacing global fidelity with immediate support reduces the discordant-success cell from 158 to 46. Forty of those 46 rows have zero expected delta. Restricting to state-changing tasks leaves six \(\Eoutcome=1,\Rsupport=0\) rows, all from GLM on three tasks.
+
+\begin{table}[t]
+\centering
+\caption{Same-run outcome/state contingencies. Cells give \((\Eoutcome,Y)=(0,0),(0,1),(1,0),(1,1)\).}
+\label{tab:contingency}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Comparison & Rows & 00 & 01 & 10 & 11 \\
+\midrule
+Outcome \(\Eoutcome\) vs. strict fidelity \(\Pstrict\) & 180 & 16 & 0 & 158 & 6 \\
+Outcome \(\Eoutcome\) vs. support \(\Rsupport\) & 180 & 13 & 3 & 46 & 118 \\
+State-changing: \(\Eoutcome\) vs. \(\Rsupport\) & 99 & 0 & 3 & 6 & 90 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The 46 successful rows with incomplete support are not near-exact states: 35 contain four to nine semantic component errors and 11 contain at least ten. Every row contains an incorrect or missing required entity state. The state-changing restriction narrows the successful-but-unsupported set without explaining the global-fidelity gap away.
+
+\begin{figure}[t]
+    \centering
+    \PaperGraphic{figure3_same_run_contingency}{1.0}
+    \caption{Same-run certification tests. The discordant-success cell contracts when the audited property moves from the full carried state to the immediate action surface, and contracts again when only state-changing transitions are retained.}
+    \label{fig:contingency}
+\end{figure}
+
+\subsection{Global fidelity remains low under a less strict comparator}
+
+On the primary 80-task natural-state condition, 14 of 240 DeepSeek handoffs satisfy strict global fidelity (5.83\%; task-cluster 95\% interval 1.25--11.25\%). Immediate support succeeds on 174 of 240 rows (72.50\%; interval 62.50--81.67\%). The median handoff contains four semantic component errors.
+
+The strict estimate is sensitive to generic links. Ignoring only extra \texttt{context\_link} edges raises global fidelity to 71/240 (29.58\%), while 169 states remain non-exact. Natural-state handoffs recover 358 of 408 expected relations (87.75\% recall). They contain 324 relation false positives, of which 318 are generic \texttt{context\_link} edges. Ignoring those extras raises relation precision from 52.49\% to 98.35\%. Missing task relations, lifecycle mismatches, and exclusion errors still prevent global exactness on most rows.
+
+The success-conditioned comparison reaches the same conclusion. On matched rows, \(C_{\Pnoctx}=30/164=18.3\%\), compared with \(C_{\Rsupport}=72.0\%\). Among successful state-changing rows, \(\Pnoctx\) holds in 27/96 (28.1\%), while immediate support holds in 90/96 (93.8\%). Comparator choice changes the magnitude of the full-state gap, not the ordering between global fidelity and local support.
+
+\subsection{Gold-state substitution yields modest, uncertain gains}
+
+Replacing model-produced handoffs with gold state separates reconstruction from action generation. On matched natural-state rows, model-produced state yields 154/180 correct actions and 164/180 successful outcomes. Gold state raises these counts to 164/180 and 171/180. At the task level, the estimated gold-minus-model-state contrast is \(+5.56\pp\) for action accuracy (task-cluster 95\% interval \([-2.78,16.67]\pp\)) and \(+3.89\pp\) for outcome success (interval \([-3.89,13.33]\pp\)). Both task-level medians are zero. Gold state improves, ties, or worsens 10/45/5 model--task pairs for action accuracy and 8/48/4 for outcome success.
+
+The point estimates are consistent with reconstruction error contributing to some failures, but the intervals do not establish an aggregate gain. Gold-state performance remains below 100\%, leaving action generation as an independent source of error. Most residual action mismatches involve semantic field selection---declared dependencies, the primary target, the decision field, or the replacement target---rather than schema validity.
+
+\subsection{Deleting a required bundle disrupts action generation}
+\label{sec:deletion}
+
+The destructive intervention changes only the state supplied to Stage~2. Under intact gold state, 40 of 60 task--model pairs produce the correct action. Deleting one selected required entity record with its attached required relations and exclusions reduces action accuracy to 1/60, a contrast of \(-65.0\pp\) (task-cluster 95\% interval \([-80.0,-48.3]\pp\); exact McNemar \(p<10^{-10}\)). Outcome success falls from 40/60 to 33/60, a contrast of \(-11.7\pp\) (interval \([-23.3,-1.7]\pp\); \(p=0.0156\)). The wrong-field and unrelated-state controls show no aggregate action-accuracy loss.
+
+\begin{table}[t]
+\centering
+\caption{Paired supplied-state intervention. Each arm contains 60 task--model pairs; only the supplied state changes within a pair.}
+\label{tab:deletion}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Supplied-state arm & Correct action \(\Maction\) & Successful outcome \(\Eoutcome\) \\
+\midrule
+Intact gold state & 40/60 (66.7\%) & 40/60 (66.7\%) \\
+Delete one required bundle & 1/60 (1.7\%) & 33/60 (55.0\%) \\
+Counterfactual wrong field & 40/60 (66.7\%) & 40/60 (66.7\%) \\
+Unrelated perturbation & 40/60 (66.7\%) & 41/60 (68.3\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+    \centering
+    \PaperGraphic{figure4_deletion_intervention}{0.92}
+    \caption{Destructive supplied-state intervention. Deleting one required state bundle nearly eliminates correct structured actions. The smaller outcome contrast reflects task dependence and no-change transitions.}
+    \label{fig:deletion}
+\end{figure}
+
+The intervention establishes local causal dependence on the availability of the selected bundle. It does not assign an effect to every field, nor does it show that locally restoring a defect inside a naturally imperfect state will reverse the deletion effect.
+
+\subsection{One-bundle natural repair does not generally restore behavior}
+\label{sec:repair}
+
+The natural-error repair experiment tests the complementary direction. Each pair begins from an archived natural state with incomplete immediate support. Arm~A replays that state; arm~B repairs one selected naturally occurring action-relevant defect. Historical downstream outcomes play no role in candidate selection, and the causal contrast uses the contemporaneous A/B calls.
+
+Across 106 pairs, action accuracy changes from 85/106 (80.2\%) to 84/106 (79.2\%), a paired contrast of \(-0.94\pp\) with a task-cluster 95\% interval of \([-20.69,19.64]\pp\). The action comparison contains 16 rescues and 17 harms (exact McNemar \(p=1.0\)). Outcome success is 90/106 (84.9\%) in both arms, with 11 rescues and 11 harms (interval \([-16.67,17.82]\pp\); \(p=1.0\)).
+
+The aggregate result is not explained solely by incomplete edits. Among the 43 pairs where the selected repair completes immediate support, action accuracy changes from 30/43 to 28/43 (\(-4.65\pp\), interval \([-33.33,28.31]\pp\)); outcome success changes from 34/43 to 28/43 (\(-13.95\pp\), interval \([-37.50,13.64]\pp\)). \Cref{tab:repair} summarizes the prespecified contrasts.
+
+\begin{table}[t]
+\centering
+\caption{Natural-error repair. Arm~A is the archived natural state; arm~B differs by one repaired action-required bundle. Intervals are task-cluster bootstrap 95\% intervals.}
+\label{tab:repair}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Population & Endpoint & Arm A & Arm B & B--A & 95\% interval & Rescue / harm \\
+\midrule
+All 106 pairs & \(\Maction\) & 85/106 & 84/106 & \(-0.94\pp\) & [\(-20.69,19.64\)] & 16 / 17 \\
+ & \(\Eoutcome\) & 90/106 & 90/106 & \(0.00\pp\) & [\(-16.67,17.82\)] & 11 / 11 \\
+\addlinespace
+Repairs completing \(\Rsupport\) (43 pairs) & \(\Maction\) & 30/43 & 28/43 & \(-4.65\pp\) & [\(-33.33,28.31\)] & 8 / 10 \\
+ & \(\Eoutcome\) & 34/43 & 28/43 & \(-13.95\pp\) & [\(-37.50,13.64\)] & 4 / 10 \\
+\addlinespace
+State-changing (12 pairs) & \(\Maction\) & 7/12 & 12/12 & \(+41.67\pp\) & [\(0.00,78.57\)] & 5 / 0 \\
+ & \(\Eoutcome\) & 11/12 & 12/12 & \(+8.33\pp\) & [\(0.00,23.08\)] & 1 / 0 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+The 12 state-changing pairs form a small prespecified stratum over five tasks. All 12 repairs complete \(\Rsupport\), and action accuracy rises from 7/12 to 12/12. This directional pattern is consistent with the main transition-specific analysis, but task and action-type composition are concentrated: 11 of the 12 rows are migration actions, and Qwen contributes none. We therefore treat the stratum as descriptive heterogeneity rather than a general repair effect.
+
+Taken together, the destructive and restorative interventions expose an asymmetry. Removing a selected required bundle from coherent gold state is strongly disruptive. Restoring one contract-defined defect in a naturally imperfect state does not generally recover action or outcome accuracy. Contract-defined support identifies the information the task specification requires; the downstream model's behavioral use of that information also depends on the surrounding state and transition.
+
+\subsection{A fixed-input bridge reproduces the DeepSeek deletion effect}
+\label{sec:bridge}
+
+Eighteen exact Stage~2 requests from the historical DeepSeek regime were replayed under the currently served \texttt{deepseek-v4-flash} alias. The binary action and outcome labels agree on all 18 rows; both regimes score 13/18 on \(\Maction\) and 13/18 on \(\Eoutcome\). This fixed-input bridge shows no observed endpoint drift on the replay set.
+
+Repeating the frozen 20-task destructive intervention under the current regime gives 13/20 correct actions with intact gold state and 0/20 after deletion, a contrast of \(-65\pp\) (task-pair bootstrap 95\% interval \([-85,-45]\pp\); 13 harms, no rescues; exact McNemar \(p=0.000244\)). Outcome success changes from 13/20 to 9/20 (\(-20\pp\); interval \([-40,-5]\pp\); four harms, no rescues; McNemar \(p=0.125\)). The historical DeepSeek contrasts were \(-40\pp\) for action accuracy and \(0\pp\) for outcome success. The two serving regimes remain separate; the bridge establishes replication of the qualitative action-level deletion effect, not snapshot equivalence.
+
+\subsection{Replacement failures concentrate in lifecycle fields}
+
+Action type drives the strongest support heterogeneity. In the pooled 960-row DeepSeek state surface, support reaches 97.9\% for apply-bundle tasks and 96.4\% for interface selection, but 0\% for object replacement. In all 192 replacement rows, the old primary target remains incorrectly active and current. In 183 rows, the replacement target is also not marked current. These lifecycle errors make every replacement state fail \(\Rsupport\), even when the replacement relation is present.
+
+\begin{table}[t]
+\centering
+\caption{Lifecycle mismatch counts within 192 replacement rows. Counts are nonexclusive.}
+\label{tab:replacement}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+Lifecycle mismatch & Rows \\
+\midrule
+Old primary target: active mismatch & 192 \\
+Old primary target: current mismatch & 192 \\
+Replacement target: current mismatch & 183 \\
+Replacement target: active mismatch & 21 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+    \centering
+    \PaperGraphic{figure5_replacement_failures}{0.95}
+    \caption{Replacement failure anatomy. The left panel reports immediate support by action type; the right panel counts lifecycle mismatches within replacement runs.}
+    \label{fig:replacement}
+\end{figure}
+
+\section{Extensions}
+\label{sec:extensions}
+
+\subsection{Updating the carried state before action}
+
+A separate 20-task probe gives Stage~2 one or two unseen typed events in addition to the prior handoff state. Stage~2 must update the state and then act, still without access to the original history or Stage~1 answer. DeepSeek and Qwen reach the correct final state in 100 of 120 episodes (83.3\%), while exact post-update state succeeds in 11/120 (9.2\%). GLM reaches the correct final state in 46/60 episodes (76.7\%), with exact state in 1/60. The bounded update reproduces the state--outcome separation. The new events may reveal action-relevant information directly, so the result is descriptive; the supplied-state interventions provide the controlled evidence that state content can change the next action.
+
+\subsection{Repository-derived executable positive control}
+
+Twenty tasks derived from public repository histories define a separate revision-selection contract. Stage~1 reconstructs registered revisions and a validator; Stage~2 sees only that state and selects the uniquely current revision; a frozen executor applies the associated hidden patch and checks the resulting tree and focused tests. The model does not generate code.
+
+Across 300 DeepSeek rows, full-row parsing, the factual Stage~1 answer, the revision action, terminal execution, and the side-effect check jointly succeed on 287 rows. Twelve of the 13 failures occur on one 115-event task whose state output is truncated at an 8,192-token cap. A matched post-hoc intervention raises only the state-output cap to 65,536 tokens and recovers all 12 rows. Excluding that task, terminal execution succeeds on 227/228 state-handoff rows, while exact semantic state and successful execution coincide on 174/228. This layer is a structural positive control for the model--parser--executor chain. Its tasks, ontology, comparator, and denominator remain separate from the controlled benchmark.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Successful execution certifies a narrow object.}
+The executor verifies the realized transition. Its success-conditioned coverage for upstream properties falls as the claim expands from the action surface to the full carried state. On matched natural-state rows, immediate support holds in 72.0\% of successful executions and 93.8\% of successful state-changing executions, while strict global fidelity holds in 3.7\%. A single success label therefore compresses distinct evidential statements.
+
+\paragraph{Coverage and discrimination are different.}
+The empirical certificate rates answer a backward question: how often is a state property present among successful runs? They do not measure the size of the probability update induced by success. In the state-changing subset, local support is already near-universal before conditioning on outcome. The useful conclusion is that successful informative transitions almost always satisfy the local contract, not that success strongly separates supported from unsupported state.
+
+\paragraph{No-change outcomes have limited diagnostic reach.}
+A correct refusal, denial, or already-satisfied operation can leave the environment unchanged. Such outcomes remain legitimate task successes, yet they can pass without exercising every field that distinguishes the next action. Reporting both the overall and state-changing certificate rates preserves the benchmark semantics while making this difference visible.
+
+\paragraph{Semantic support is not a behavioral sufficient statistic.}
+The support endpoint \(\Rsupport\) is defined by the frozen task contract. The interventions show why this semantic definition should remain separate from a claim about model behavior. Deleting a selected required bundle from intact gold state is strongly disruptive. Repairing one natural defect---even when the repair completes \(\Rsupport\)---does not generally improve downstream accuracy. The model may depend on other state content, exploit redundant cues, or respond to inconsistencies in the surrounding natural state. A contract can specify the information an action should use without fully characterizing how a language model will use it.
+
+\paragraph{Destructive dependence and restorative sufficiency are asymmetric.}
+Ablation asks whether removing information from a coherent baseline changes behavior. Repair asks whether adding information to an imperfect baseline recovers behavior. These interventions operate on different starting-state distributions and need not be causal inverses. Reporting both directions avoids treating a large deletion effect as proof that a local repair will restore performance.
+
+\paragraph{Evaluation design.}
+Continuation benchmarks should expose five boundaries: visible history, carried state, downstream input, generated action, and executed environment state. The action schema should enumerate every field consumed by execution. Outcome sets should retain no-change cases and identify state-changing cases explicitly. Exact-state gates should be accompanied by component precision and recall, error severity, comparator sensitivity, and same-run contingencies. Gold-state substitution locates reconstruction bottlenecks; supplied-state interventions test how selected state content affects behavior; restorative interventions reveal whether correcting natural defects is sufficient for recovery.
+
+\paragraph{Mutable model aliases require explicit bridges.}
+Provider aliases can change between an original evaluation and a later intervention. Fixed-input replay gives a direct check on the affected boundary, while repeating a frozen intervention tests whether its qualitative effect survives the serving change. These bridges should remain separate from the original denominator and should not be read as global model equivalence tests.
+
+\section{Limitations}
+\label{sec:limitations}
+
+The empirical certificate rates are conditional frequencies on a controlled benchmark. Their values depend on task composition, action contracts, and executor semantics and should not be extrapolated as deployment-wide guarantees.
+
+Strict \(\Pstrict\) is a prompt-contract measure rather than expert semantic judgment. Unsupported generic links dominate its relation false positives. The \(\Pnoctx\) sensitivity changes the global-fidelity rate substantially, although the relaxed rate remains below immediate support. The support endpoint covers one specified next action and requires exact lifecycle fields for its endpoints; it does not certify future actions outside that surface.
+
+DeepSeek covers the full 80-task matrix; Qwen and GLM cover a matched 20-task subset, and Qwen and GLM share serving infrastructure. The cross-model results establish a repeated measurement pattern on shared tasks, not a broad ranking of model families. The controlled tasks emphasize explicit operational transitions, and the main evaluation ends after one handoff. Repeated reuse could reveal accumulation, delayed activation, recovery, or self-correction.
+
+The destructive intervention begins from gold state and removes one selected composite bundle. The natural repair changes one selected defect in an archived natural state. Although 43 repairs complete immediate support, their interval estimates remain wide, and the state-changing stratum contains only 12 pairs over five tasks with concentrated action-type composition. The interventions therefore support local claims about the tested edits and populations. They do not estimate a formal natural indirect effect or the contribution of every field.
+
+The fixed-input DeepSeek bridge contains 18 replay rows and one 20-task intervention. It supports boundary-specific agreement and replication of the action-level deletion result on those inputs. It does not establish equivalence between historical and current model snapshots. Repository-derived tasks use a different contract and may overlap model pretraining.
+
+\section{Data and Artifact Availability}
+\label{sec:data}
+\enlargethispage{\baselineskip}
+
+Code, frozen experiment records, and reference outputs supporting this study are available at {\small\url{https://github.com/Pure-Bliss-734/paper-02-successful-execution-certification}}. The repository contains task and schema manifests, saved model responses and parsed outputs, row-level scores, deterministic scorer, executor, and validator records, intervention records, H5/E5/VCR closure evidence, manuscript and figure source, frozen paper-facing values, a claim-to-artifact map, and an experiment-and-scaffolding reading guide. The original August~3 evidence and the later natural-repair and DeepSeek-bridge experiments remain separately identified and are not pooled. The controlled tasks contain no human participants or private user data; the repository-derived positive control uses public open-source histories and patches.
+
+From these inputs, \texttt{python3 tools/reproduce.py} performs a one-command offline recomputation using only the Python standard library and no API credentials or network access. It verifies package and closure integrity; replays saved outputs through parsing, scoring, execution, and validation; reproduces the paper-facing P/R/M/E results and the separate intervention, future-probe, repository-control, capacity, replacement, natural-repair, and bridge results; reruns the specified task-cluster intervals and paired tests; and checks the quantitative values in Figures~2--7 against the frozen references. It does not make provider calls, regenerate model outputs, recreate upstream repositories, or claim independent fresh-data reproduction.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Successful execution provides a selective empirical certificate of the state behind an LLM-agent handoff. It verifies the realized transition, has high immediate-support coverage when that transition changes the environment, and gives little support to a claim of complete carried-state fidelity. Comparator sensitivity changes the size of the global-fidelity gap without changing this ordering.
+
+The controls show that these evidential levels do not collapse into one another. Gold state leaves residual action-generation error. Deleting selected required information sharply disrupts action generation, while repairing one naturally occurring action-relevant defect does not generally restore behavior, even when the repair completes the immediate-support contract. Successful outcome, semantic state support, destructive dependence, and restorative sufficiency answer different questions. Agent evaluations should record the carried state, the current action surface, the generated action, and the executed outcome as distinct objects of the same episode.
+
+\clearpage
+\appendix
+
+\section{Experimental Details and Conditions}
+\label{app:design}
+
+\begin{table}[h]
+\centering
+\caption{Evidence layers. Percentages and contrasts are interpreted within each layer.}
+\label{tab:evidence_layers}
+\small
+\begin{tabularx}{\linewidth}{@{}lrrY@{}}
+\toprule
+Experiment & Tasks & Rows & Role \\
+\midrule
+Controlled DeepSeek & 80 & 1,200 & Primary fixed-model measurement; 40 confirmatory plus 40 structural-replication tasks. \\
+Controlled Qwen & 20 & 180 & Matched natural/structured/review/repair diagnostics. \\
+Controlled GLM & 20 & 60 & Third-family natural-state validation on the same matched tasks. \\
+Complete-schema action/oracle & 20 & 600 & State-only action calls and gold-state controls across three models. \\
+Future update probe & 20 & 180 & New tasks with one unseen transition before action. \\
+Destructive state intervention & 20 & 240 & Four state arms across three models. \\
+Natural-error repair & 30 & 212 & 106 contemporaneous natural/repaired pairs. \\
+DeepSeek serving bridge & 20 & 58 & 18 exact replays plus 20 intact/deletion pairs. \\
+Repository DeepSeek & 20 & 300 & Separate model--parser--executor positive control. \\
+Repository capacity sensitivity & 1 & 27 & Post-hoc low/high state-output-cap intervention. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Controlled evaluation conditions. S/B/C are diagnostics, not proposed methods.}
+\label{tab:conditions}
+\small
+\begin{tabularx}{\linewidth}{@{}c l Y c@{}}
+\toprule
+ID & Condition & Computation & Calls/row \\
+\midrule
+H & History direct & History \(\rightarrow\) answer and action; no stored state & 1 \\
+N & Natural state & History \(\rightarrow\) answer and line state; state only \(\rightarrow\) action & 2 \\
+S & Structured state & History \(\rightarrow\) answer and typed JSON state; state only \(\rightarrow\) action & 2 \\
+B & Blind review & Structured state; one generic review; state only \(\rightarrow\) action & 3 \\
+C & Checker repair & Structured state; one category-only check and repair; state only \(\rightarrow\) action & 3 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Selected pre-specified variables and disclosed layer differences.}
+\label{tab:variables}
+\scriptsize
+\begin{tabularx}{\linewidth}{@{}l l Y Y@{}}
+\toprule
+Group & Variable & Setting & Scope or disclosed difference \\
+\midrule
+Model & Snapshots & \texttt{deepseek-v4-flash}, \texttt{qwen3.7-max-2026-06-08}, \texttt{glm-5.2} & DeepSeek supplies the full 80-task matrix; Qwen and GLM use the matched subset. \\
+Model & Routes & Direct DeepSeek endpoint; DashScope for Qwen; Alibaba Model Studio for GLM & Route and returned identifier are recorded per attempt; fallback is disabled. \\
+Generation & Sampling & Temperature 0; thinking disabled; top-p and stop sequences omitted & Temperature zero reduces sampling variation but does not guarantee provider determinism. \\
+Generation & Output caps & 8,192 tokens for controlled Stage~1 and repository state generation; 2,048 for final-schema Stage~2; 4,096 for future calls & Caps are fixed before each run. \\
+Generation & External capabilities & Tools, function calling, web search, and retrieval absent or disabled & Hidden reasoning is not supplied to parsers, scorers, or later stages. \\
+Interface & Stage~2 visibility & Carried state plus complete action contract & History and Stage~1 answer are absent. \\
+Runtime & Retry policy & At most two identical attempts per logical call in the original plans; no semantic retry & Exhausted transport or parse failures remain scored failures. \\
+Runtime & Executor & Atomic transaction executor with two independent validators & \(\Eoutcome\) uses executor acceptance, exact operational terminal equality, and the side-effect check. \\
+Analysis & Uncertainty & 20,000 task-cluster bootstrap resamples & All repeats, paired arms, and matched-model observations remain attached to sampled tasks. \\
+Artifact & Replay & Offline replay of archived logs and receipts is deterministic & Regenerating provider responses requires credentials and may change with serving updates. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Legacy Measures and Statistical Definitions}
+\label{app:legacy}
+
+The Stage~1 answer score is
+\begin{equation}
+A=\mathbf{1}[\Phi_A(\hat a,a^\star)=1].
+\end{equation}
+A historical exact-state score \(Z\) uses a reference that predates the prompt-visible semantic contract and includes prompt-invisible fields and scorer-side relation identifiers. We retain \(A\) as an upstream diagnostic and \(Z\) as a provenance sensitivity; neither enters the four-endpoint narrative.
+
+For component \(q\in\{\text{entity},\text{relation},\text{exclusion}\}\), semantic-set precision and recall are
+\begin{equation}
+\operatorname{Precision}_q=\frac{TP_q}{TP_q+FP_q},\qquad
+\operatorname{Recall}_q=\frac{TP_q}{TP_q+FN_q}.
+\end{equation}
+Operational equality for outcome success excludes non-semantic transaction identifiers. Parse failures contribute zero to each applicable endpoint.
+
+For condition \(c\), task-balanced directional discordance is
+\begin{equation}
+D_c^{b}(X,Y)=\frac{1}{T}\sum_{t=1}^{T}\frac{1}{R_{tc}}
+\sum_{r=1}^{R_{tc}}\mathbf{1}[X_{tcr}=1,Y_{tcr}=0],
+\end{equation}
+where \(X\in\{A,\Maction,\Eoutcome\}\) and \(Y\in\{Z,\Pstrict,\Rsupport\}\). Cross-model contrasts use identical tasks, conditions, and repeat schedules.
+
+\section{Complete Controlled Results}
+\label{app:controlled}
+
+Parsing succeeds in 1,193/1,200 primary controlled rows (99.42\%). The Stage~1 answer is exact in 372/1,200 rows (31.00\%), and the legacy exact-state measure is 34/960 (3.54\%) among state-producing rows.
+
+\begin{table}[h]
+\centering
+\caption{DeepSeek controlled rates by condition under the original generic action schema (240 rows each). Downstream measures are labeled \(M_{v1}\) and \(E_{v1}\).}
+\label{tab:deepseek_v1}
+\small
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+ & \(A\) & \(M_{v1}\) & \(E_{v1}\) & \(Z\) & \(Z\wedge E_{v1}\) & \(\Pstrict\) & \(\Rsupport\) \\
+\midrule
+H & 30.42 & 25.00 & 45.00 & -- & -- & -- & -- \\
+N & 32.50 & 18.75 & 38.75 & 5.83 & 2.08 & 5.83 & 72.50 \\
+S & 30.42 & 16.67 & 36.67 & 2.08 & 1.25 & 3.33 & 69.17 \\
+B & 31.25 & 17.08 & 36.67 & 2.92 & 1.25 & 4.17 & 68.75 \\
+C & 30.42 & 17.92 & 37.92 & 3.33 & 1.25 & 4.58 & 68.75 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Natural state on the same 20 controlled tasks. The last column reports successful, unsupported rows among nonzero-delta executions.}
+\label{tab:matched_detailed}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Model & Rows & \(\Pstrict\) & \(\Rsupport\) & Relation recall & Median errors & \(\Maction\) & \(\Eoutcome\) / \(E^+R^-\) \\
+\midrule
+DeepSeek & 60 & 6 (10.0\%) & 42 (70.0\%) & 94/105 & 5 & 51 (85.0\%) & 55 (91.7\%) / 0/33 \\
+Qwen & 60 & 0 & 42 (70.0\%) & 93/105 & 5.5 & 51 (85.0\%) & 54 (90.0\%) / 0/33 \\
+GLM & 60 & 0 & 37 (61.7\%) & 95/105 & 6 & 52 (86.7\%) & 55 (91.7\%) / 6/30 \\
+All & 180 & 6 (3.3\%) & 121 (67.2\%) & 282/315 & 5 & 154 (85.6\%) & 164 (91.1\%) / 6/96 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Complete action-specific contract. Contract-v1 diagnostic calls are excluded.}
+\label{tab:contract_v2}
+\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Model & Input state & Rows & Full action & Terminal state \\
+\midrule
+DeepSeek & model-carried & 180 & 151 (83.89\%) & 163 (90.56\%) \\
+Qwen & model-carried & 180 & 147 (81.67\%) & 155 (86.11\%) \\
+GLM & model-carried N & 60 & 52 (86.67\%) & 55 (91.67\%) \\
+DeepSeek & gold & 60 & 56 (93.33\%) & 57 (95.00\%) \\
+Qwen & gold & 60 & 56 (93.33\%) & 59 (98.33\%) \\
+GLM & gold & 60 & 52 (86.67\%) & 55 (91.67\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Contract-v2 model-state results by provider and condition.}
+\label{tab:condition_v2}
+\small
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Provider & Condition & Rows & \(\Pstrict\) & \(\Rsupport\) & \(\Maction\) & \(\Eoutcome\) \\
+\midrule
+DeepSeek & N & 60 & 6 & 42 & 51 & 55 \\
+ & S & 40 & 2 & 27 & 34 & 36 \\
+ & B & 40 & 3 & 28 & 33 & 36 \\
+ & C & 40 & 3 & 28 & 33 & 36 \\
+Qwen & N & 60 & 0 & 42 & 51 & 54 \\
+ & S & 40 & 0 & 17 & 34 & 36 \\
+ & B & 40 & 0 & 17 & 33 & 34 \\
+ & C & 40 & 0 & 12 & 29 & 31 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Future-update validation. All endpoints after Stage~1 refer to the post-update handoff.}
+\label{tab:future}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Model & Rows & Stage-1 \(A\) & Safe & Exact \(\Pstrict\) & Full action \(\Maction\) & Terminal \(\Eoutcome\) \\
+\midrule
+DeepSeek & 60 & 15 & 49 & 1 & 30 & 41 \\
+Qwen & 60 & 55 & 49 & 10 & 58 & 59 \\
+GLM & 60 & 50 & 42 & 1 & 46 & 46 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Sensitivity of the necessary-state deletion contrast. Effects are deletion minus intact gold state.}
+\label{tab:deletion_sensitivity}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Task stratum & Task--model pairs & \(\Delta\Maction\) & \(\Delta\Eoutcome\) \\
+\midrule
+All tasks & 60 & \(-65.00\pp\) & \(-11.67\pp\) \\
+Exclude four primary-target deletions & 48 & \(-66.67\pp\) & \(0.00\pp\) \\
+Future event names deleted entity & 24 & \(-62.50\pp\) & \(-29.17\pp\) \\
+Future event does not name deleted entity & 36 & \(-66.67\pp\) & \(0.00\pp\) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Severity of prompt-contract fidelity errors on state rows.}
+\label{tab:severity}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Provider & Exact & One & Two--three & Four--nine & Ten or more & Median \\
+\midrule
+DeepSeek & 43 & 118 & 277 & 469 & 53 & 4 \\
+Qwen & 0 & 13 & 22 & 103 & 42 & 7 \\
+GLM & 0 & 0 & 19 & 30 & 11 & 6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Repository-Derived Positive Control}
+\label{app:repository}
+
+The final set spans 20 tasks, 12 public repositories, and 113 pull-request commits. Each source task is converted into a revision-lifecycle history. The base revision initializes the registry; every pull-request commit contributes introduced, invalidated, and activated events; a final event binds the focused validator. Stage~1 returns a factual answer and a state containing every registered revision, the validator, lifecycle relations, and stale-revision exclusions. Stage~2 emits \texttt{apply\_repository\_revision} with a target revision and validator.
+
+The executor starts from the frozen base repository, applies the hidden combined patch associated with the selected revision, and checks the terminal tree, changed paths, blob map, focused test, and forbidden side effects. Both independent terminal validators accept all 20 gold actions, and every stale-revision counterfactual fails to reach the gold terminal state.
+
+\begin{table}[h]
+\centering
+\caption{DeepSeek repository-derived results by condition.}
+\label{tab:repo_results}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Condition & Rows & Full-row parse & \(A\) & \(\Maction\) & \(\Eoutcome\) & State \(\wedge E\) \\
+\midrule
+H & 60 & 60 & 60 & 60 & 60 & -- \\
+N & 60 & 57 & 57 & 57 & 57 & 51 \\
+S & 60 & 56 & 56 & 56 & 56 & 48 \\
+B & 60 & 57 & 57 & 57 & 57 & 40 \\
+C & 60 & 57 & 57 & 57 & 57 & 35 \\
+\midrule
+Total & 300 & 287 & 287 & 287 & 287 & 174/240 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Post-hoc output-cap sensitivity on the 115-event task.}
+\label{tab:capacity}
+\small
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Conditions & State cap & Rows & Truncated & Full parse & State & \(\Maction\) & \(\Eoutcome\) \\
+\midrule
+H & 8,192 & 3 & 0 & 3 & -- & 3 & 3 \\
+N/S/B/C & 8,192 & 12 & 12 & 0 & 0 & 0 & 0 \\
+N/S/B/C & 65,536 & 12 & 0 & 12 & 12 & 12 & 12 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Contingency, Comparator, and Subgroup Diagnostics}
+\label{app:diagnostics}
+
+\begin{table}[h]
+\centering
+\caption{Corrected-contract same-row contingencies on matched natural-state rows. Cells give \((X,Y)=(0,0),(0,1),(1,0),(1,1)\).}
+\label{tab:full_contingency}
+\small
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Stratum & Pair & Rows & 00 & 01 & 10 & 11 \\
+\midrule
+All matched N & \(\Maction\times\Pstrict\) & 180 & 23 & 3 & 151 & 3 \\
+ & \(\Eoutcome\times\Pstrict\) & 180 & 16 & 0 & 158 & 6 \\
+ & \(\Maction\times\Rsupport\) & 180 & 16 & 10 & 43 & 111 \\
+ & \(\Eoutcome\times\Rsupport\) & 180 & 13 & 3 & 46 & 118 \\
+Nonzero delta & \(\Maction\times\Pstrict\) & 99 & 6 & 0 & 90 & 3 \\
+ & \(\Eoutcome\times\Pstrict\) & 99 & 3 & 0 & 93 & 3 \\
+ & \(\Maction\times\Rsupport\) & 99 & 2 & 4 & 4 & 89 \\
+ & \(\Eoutcome\times\Rsupport\) & 99 & 0 & 3 & 6 & 90 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Comparator sensitivity among successful matched natural-state rows.}
+\label{tab:comparator_success}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Provider & Successful rows & Strict \(\Pstrict\) & \(\Pnoctx\) & Support \(\Rsupport\) \\
+\midrule
+DeepSeek & 55 & 6 & 19 & 42 \\
+Qwen & 54 & 0 & 6 & 42 \\
+GLM & 55 & 0 & 5 & 34 \\
+All & 164 & 6 & 30 & 118 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \PaperGraphic{figure6_subgroup_heatmap}{1.0}
+    \caption{Pooled DeepSeek subgroup results across N/S/B/C. Action type drives the strongest support heterogeneity; replacement has zero immediate support and the largest mean semantic error count.}
+    \label{fig:subgroups}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Composition of corrected-contract \(\Rsupport=0,\Eoutcome=1\) rows. Component counts are nonexclusive.}
+\label{tab:unsupported_success}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Stratum & Rows & Tasks & Required entity & Critical relation & Errors 4--9 & Errors \(\ge10\) \\
+\midrule
+All matched N & 46 & 12 & 46 & 1 & 35 & 11 \\
+Zero expected delta & 40 & 9 & 40 & 1 & 30 & 10 \\
+Nonzero expected delta & 6 & 3 & 6 & 0 & 5 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \PaperGraphic{figure7_state_contrasts}{1.0}
+    \caption{Task-paired state contrasts for structured versus natural state and checker repair versus blind review. The remaining contrasts do not support a general improvement from structure or one-pass feedback.}
+    \label{fig:state_contrasts}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Task-level gold-state minus model-state differences under contract v2.}
+\label{tab:gold_pairs}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Model & \(\Delta\Maction\) & \multicolumn{3}{c}{M: better/tie/worse} & \(\Delta\Eoutcome\) & E: better/tie/worse \\
+\midrule
+DeepSeek & +8.33 & 3 & 16 & 1 & +3.33 & 2/17/1 \\
+Qwen & +8.33 & 2 & 17 & 1 & +8.33 & 2/17/1 \\
+GLM & 0.00 & 5 & 12 & 3 & 0.00 & 4/14/2 \\
+All & +5.56 & 10 & 45 & 5 & +3.89 & 8/48/4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Sensitivity of strict prompt-contract fidelity to extra generic \texttt{context\_link} relations.}
+\label{tab:ctx_sensitivity}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Scope & Strict \(\Pstrict\) & Ignore extra \texttt{context\_link} \\
+\midrule
+Primary natural-state DeepSeek & 14/240 (5.83\%) & 71/240 (29.58\%) \\
+Pooled DeepSeek N/S/B/C & 43/960 (4.48\%) & 223/960 (23.23\%) \\
+Matched natural DeepSeek & 6/60 (10.00\%) & 19/60 (31.67\%) \\
+Matched natural Qwen & 0/60 & 6/60 (10.00\%) \\
+Matched natural GLM & 0/60 & 6/60 (10.00\%) \\
+Matched natural pooled & 6/180 (3.33\%) & 31/180 (17.22\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Natural-Repair and DeepSeek-Bridge Diagnostics}
+\label{app:new_results}
+
+\begin{table}[h]
+\centering
+\caption{Prespecified natural-repair strata. Effects are arm B minus arm A; intervals are task-cluster bootstrap 95\% intervals.}
+\label{tab:repair_strata}
+\scriptsize
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Stratum & Endpoint & Pairs & Arm A & Arm B & Difference & 95\% interval \\
+\midrule
+Repair completes \(\Rsupport\) & \(\Maction\) & 43 & 30 & 28 & \(-4.65\pp\) & [\(-33.33,28.31\)] \\
+ & \(\Eoutcome\) & 43 & 34 & 28 & \(-13.95\pp\) & [\(-37.50,13.64\)] \\
+Repair remains incomplete & \(\Maction\) & 63 & 55 & 56 & \(+1.59\pp\) & [\(-20.00,23.44\)] \\
+ & \(\Eoutcome\) & 63 & 56 & 62 & \(+9.52\pp\) & [\(-3.28,27.45\)] \\
+DeepSeek & \(\Maction\) & 66 & 55 & 53 & \(-3.03\pp\) & [\(-24.64,19.12\)] \\
+ & \(\Eoutcome\) & 66 & 58 & 59 & \(+1.52\pp\) & [\(-12.90,17.91\)] \\
+Qwen & \(\Maction\) & 18 & 12 & 15 & \(+16.67\pp\) & [\(0.00,50.00\)] \\
+ & \(\Eoutcome\) & 18 & 12 & 15 & \(+16.67\pp\) & [\(0.00,50.00\)] \\
+GLM & \(\Maction\) & 22 & 18 & 16 & \(-9.09\pp\) & [\(-52.38,30.43\)] \\
+ & \(\Eoutcome\) & 22 & 20 & 16 & \(-18.18\pp\) & [\(-55.00,16.67\)] \\
+Nonzero delta & \(\Maction\) & 12 & 7 & 12 & \(+41.67\pp\) & [\(0.00,78.57\)] \\
+ & \(\Eoutcome\) & 12 & 11 & 12 & \(+8.33\pp\) & [\(0.00,23.08\)] \\
+Zero delta & \(\Maction\) & 94 & 78 & 72 & \(-6.38\pp\) & [\(-27.85,15.63\)] \\
+ & \(\Eoutcome\) & 94 & 79 & 78 & \(-1.06\pp\) & [\(-19.59,19.18\)] \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{DeepSeek fixed-input replay and destructive-intervention bridge. Historical and current serving regimes are not pooled.}
+\label{tab:bridge_full}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Analysis & Endpoint & Historical & Current & Agreement / current contrast & 95\% interval & Rescue & Harm \\
+\midrule
+Exact replay & \(\Maction\) & 13/18 & 13/18 & 18/18 agree & -- & 0 & 0 \\
+ & \(\Eoutcome\) & 13/18 & 13/18 & 18/18 agree & -- & 0 & 0 \\
+\addlinespace
+Historical deletion & \(\Maction\) & 8/20 & 0/20 & \(-40\pp\) & [\(-60,-20\)] & 0 & 8 \\
+ & \(\Eoutcome\) & 8/20 & 8/20 & \(0\pp\) & [\(0,0\)] & 0 & 0 \\
+Current deletion & \(\Maction\) & 13/20 & 0/20 & \(-65\pp\) & [\(-85,-45\)] & 0 & 13 \\
+ & \(\Eoutcome\) & 13/20 & 9/20 & \(-20\pp\) & [\(-40,-5\)] & 0 & 4 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\paragraph{Run inclusion.}
+The formal natural-repair run contains 212/212 HTTP 200 responses, 106/106 closed pairs, zero retries, zero fallbacks, zero parse failures, and zero schema failures. The formal DeepSeek bridge contains 58/58 HTTP 200 responses with the same zero-failure profile. A separate 10-call smoke test is infrastructure evidence only. The first authorized 58-call bridge attempt reached local result collection but failed before the first row packet was committed. Because no auditable response row existed, the complete attempt was excluded independently of scientific outcomes. The recovery run used the unchanged frozen manifest after a full offline closure test.
+
+\section{Semantic Component and Validator Diagnostics}
+\label{app:semantic}
+
+\begin{table}[h]
+\centering
+\caption{Macro-averaged semantic precision and recall on matched controlled tasks.}
+\label{tab:macro_semantic}
+\small
+\begin{tabular}{@{}llrr@{}}
+\toprule
+Provider & Component & Precision & Recall \\
+\midrule
+DeepSeek & Entity facts & 98.03 & 98.03 \\
+ & Relations & 61.19 & 76.81 \\
+ & Exclusion set & 91.25 & 91.25 \\
+Qwen & Entity facts & 96.46 & 96.29 \\
+ & Relations & 61.46 & 76.99 \\
+ & Exclusion set & 97.73 & 97.73 \\
+GLM & Entity facts & 97.36 & 97.36 \\
+ & Relations & 57.29 & 78.81 \\
+ & Exclusion set & 52.54 & 52.54 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Set-semantic relation accounting. Adjusted precision ignores only extra generic \texttt{context\_link} edges.}
+\label{tab:relations}
+\scriptsize
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Scope & Expected & Observed & TP & FN & FP & Precision & Adjusted & Recall \\
+\midrule
+Primary N DeepSeek & 408 & 682 & 358 & 50 & 324 & 52.49 & 98.35 & 87.75 \\
+Pooled DeepSeek N/S/B/C & 1,632 & 2,671 & 1,413 & 219 & 1,258 & 52.90 & 99.58 & 86.58 \\
+Matched N DeepSeek & 105 & 182 & 94 & 11 & 88 & 51.65 & 98.95 & 89.52 \\
+Matched N Qwen & 105 & 180 & 93 & 12 & 87 & 51.67 & 100.00 & 88.57 \\
+Matched N GLM & 105 & 186 & 95 & 10 & 91 & 51.08 & 94.06 & 90.48 \\
+Matched N pooled & 315 & 548 & 282 & 33 & 266 & 51.46 & 97.58 & 89.52 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Complete-contract validator diagnostics and side-effect checks. \(\Eoutcome\) remains independently defined.}
+\label{tab:validators}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Provider & Rows & Side-effect-free & A+B+ & A+B-- & A--B+ & A--B-- \\
+\midrule
+DeepSeek & 240 & 240 & 220 & 20 & 0 & 0 \\
+Qwen & 240 & 235 & 214 & 18 & 0 & 8 \\
+GLM & 120 & 119 & 110 & 5 & 1 & 4 \\
+All & 600 & 594 & 544 & 43 & 1 & 12 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Repeat robustness.}
+For DeepSeek natural state over 80 controlled tasks, the Stage~1 answer succeeds in all three repeats on 25 tasks and in at least two repeats on 26; \(\Eoutcome\) succeeds on 28 and 30; the legacy exact-state measure on 4 and 5; and \(\Rsupport\) on 56 and 58. The low exact-state rate is therefore not attributable to one stochastic miss per task.
+
+\paragraph{Artifact boundary.}
+Offline recomputation covers semantic matching, component precision and recall, action accuracy, execution outcomes, same-run contingencies, task-cluster intervals, paired intervention contrasts, and table values without contacting a model provider. Regenerating responses requires commercial credentials and may differ under future serving updates.
+
+\clearpage
+\begin{thebibliography}{99}
+
+\bibitem[Budzianowski et~al.(2018)]{budzianowski2018multiwoz}
+Paweł Budzianowski, Tsung-Hsien Wen, Bo-Hsiang Tseng, Iñigo Casanueva, Stefan Ultes, Osman Ramadan, and Milica Gašić.
+\newblock MultiWOZ: A large-scale multi-domain wizard-of-oz dataset for task-oriented dialogue modelling.
+\newblock In \emph{EMNLP}, 2018.
+
+\bibitem[Chen et~al.(2024)]{chen2024agentverse}
+Weize Chen et~al.
+\newblock AgentVerse: Facilitating multi-agent collaboration and exploring emergent behaviors.
+\newblock In \emph{ICLR}, 2024.
+
+\bibitem[DeepSeek(2026)]{deepseek2026changelog}
+DeepSeek.
+\newblock DeepSeek API change log: DeepSeek-V4-Flash update, July 31, 2026.
+\newblock \url{https://api-docs.deepseek.com/updates/}, 2026.
+
+\bibitem[Deng et~al.(2023)]{deng2023mind2web}
+Xiang Deng, Yu Gu, Boyuan Zheng, Shijie Chen, Samuel Stevens, Boshi Wang, Huan Sun, and Yu Su.
+\newblock Mind2Web: Towards a generalist agent for the web.
+\newblock In \emph{NeurIPS}, 2023.
+
+\bibitem[Drouin et~al.(2024)]{drouin2024workarena}
+Alexandre Drouin et~al.
+\newblock WorkArena: How capable are web agents at solving common knowledge work tasks?
+\newblock In \emph{ICML}, 2024.
+
+\bibitem[Efron and Tibshirani(1993)]{efron1993bootstrap}
+Bradley Efron and Robert J. Tibshirani.
+\newblock \emph{An Introduction to the Bootstrap}.
+\newblock Chapman and Hall/CRC, 1993.
+
+\bibitem[Fourney et~al.(2024)]{fourney2024magenticone}
+Adam Fourney et~al.
+\newblock Magentic-One: A generalist multi-agent system for solving complex tasks.
+\newblock arXiv:2411.04468, 2024.
+
+\bibitem[Fu(2026)]{fu2026statebind}
+Xiaonan Fu.
+\newblock StateBind: Evaluating executable agent state across context windows and handoffs.
+\newblock COLM 2026 Workshop on Context Beyond the Window, OpenReview, 2026.
+
+\bibitem[Ganz et~al.(2026)]{ganz2026handofftax}
+Roy Ganz, Mor Shpigel Nacson, Adi Kalyanpur, and Ron Litman.
+\newblock The handoff tax: Continuing non-native trajectories in LLM agents.
+\newblock arXiv:2608.24358, 2026.
+
+\bibitem[He et~al.(2026)]{he2026procbench}
+Jiawei He et~al.
+\newblock ProcBench: Evaluating process-level defects and control preservation in LLM coding agents.
+\newblock arXiv:2605.20251, 2026.
+
+\bibitem[Heck et~al.(2020)]{heck2020trippy}
+Michael Heck et~al.
+\newblock TripPy: A triple copy strategy for value independent neural dialog state tracking.
+\newblock In \emph{SIGDIAL}, 2020.
+
+\bibitem[Hong et~al.(2024)]{hong2024metagpt}
+Sirui Hong et~al.
+\newblock MetaGPT: Meta programming for a multi-agent collaborative framework.
+\newblock In \emph{ICLR}, 2024.
+
+\bibitem[Hosseini-Asl et~al.(2020)]{hossein2020simpletod}
+Ehsan Hosseini-Asl, Bryan McCann, Chien-Sheng Wu, Semih Yavuz, and Richard Socher.
+\newblock A simple language model for task-oriented dialogue.
+\newblock In \emph{NeurIPS}, 2020.
+
+\bibitem[Hu et~al.(2025)]{hu2025memoryagentbench}
+Yuanzhe Hu, Yu Wang, and Julian McAuley.
+\newblock Evaluating memory in LLM agents via incremental multi-turn interactions.
+\newblock arXiv:2507.05257, 2025.
+
+\bibitem[Huang et~al.(2026)]{huang2026pact}
+Chen Huang, Yuhao Wu, and Wenxuan Zhang.
+\newblock What should agents say? Action-state communication for efficient multi-agent systems.
+\newblock arXiv:2606.05304, 2026.
+
+\bibitem[Jimenez et~al.(2024)]{jimenez2024swebench}
+Carlos E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, and Karthik Narasimhan.
+\newblock SWE-bench: Can language models resolve real-world GitHub issues?
+\newblock In \emph{ICLR}, 2024.
+
+\bibitem[Kapoor et~al.(2025)]{kapoor2025agentsmatter}
+Sayash Kapoor, Benedikt Stroebl, Zachary S. Siegel, Nitya Nadgir, and Arvind Narayanan.
+\newblock AI agents that matter.
+\newblock \emph{Transactions on Machine Learning Research}, 2025.
+
+\bibitem[Kato and Kato(2026)]{kato2026handover}
+Masahiro Kato and Taka Kato.
+\newblock Handover of in-context learning state across session boundaries.
+\newblock arXiv:2608.14528, 2026.
+
+\bibitem[KC and Budathoki(2026)]{kc2026handoffdebt}
+Dipesh KC and Anjila Budathoki.
+\newblock Handoff debt: The rediscovery cost when coding agents take over interrupted tasks.
+\newblock arXiv:2606.02875, 2026.
+
+\bibitem[Koh et~al.(2024)]{koh2024visualwebarena}
+Jing Yu Koh et~al.
+\newblock VisualWebArena: Evaluating multimodal agents on realistic visual web tasks.
+\newblock In \emph{ACL}, 2024.
+
+\bibitem[Le Sellier de Chezelles et~al.(2025)]{lesellier2025browsergym}
+Thibault Le Sellier de Chezelles et~al.
+\newblock The BrowserGym ecosystem for web agent research.
+\newblock \emph{Transactions on Machine Learning Research}, 2025.
+
+\bibitem[Li et~al.(2023a)]{li2023camel}
+Guohao Li, Hasan Abed Al Kader Hammoud, Hani Itani, Dmitrii Khizbullin, and Bernard Ghanem.
+\newblock CAMEL: Communicative agents for ``mind'' exploration of large scale language model society.
+\newblock In \emph{NeurIPS}, 2023a.
+
+\bibitem[Li et~al.(2023b)]{li2023apibank}
+Minghao Li et~al.
+\newblock API-Bank: A comprehensive benchmark for tool-augmented LLMs.
+\newblock In \emph{EMNLP}, 2023b.
+
+\bibitem[Liu et~al.(2024)]{liu2024agentbench}
+Xiao Liu et~al.
+\newblock AgentBench: Evaluating LLMs as agents.
+\newblock In \emph{ICLR}, 2024.
+
+\bibitem[Long et~al.(2026)]{long2026memtrace}
+Xianxuan Long, Zhikai Chen, Shenglai Zeng, Shouren Wang, Kai Guo, and Jiliang Tang.
+\newblock MemTrace: Probing what final accuracy misses in long-term memory.
+\newblock arXiv:2606.17328, 2026.
+
+\bibitem[Lu et~al.(2024)]{lu2024toolsandbox}
+Jiarui Lu et~al.
+\newblock ToolSandbox: A stateful, conversational, interactive evaluation benchmark for LLM tool use capabilities.
+\newblock arXiv:2408.04682, 2024.
+
+\bibitem[Lu et~al.(2026)]{lu2026wirelessops}
+Zijian Lu, Yiping Zuo, Hao Xu, Weicong Chen, Xin He, Jiajia Guo, and Shi Jin.
+\newblock WirelessOpsAgent: A benchmark and agent design for action assurance in wireless networks.
+\newblock arXiv:2608.08277, 2026.
+
+\bibitem[Ma et~al.(2024)]{ma2024agentboard}
+Chang Ma et~al.
+\newblock AgentBoard: An analytical evaluation board of multi-turn LLM agents.
+\newblock In \emph{NeurIPS}, 2024.
+
+\bibitem[Ma et~al.(2026)]{ma2026memprobe}
+Enze Ma et~al.
+\newblock MEMPROBE: Probing long-term agent memory via hidden user-state recovery.
+\newblock arXiv:2606.24595, 2026.
+
+\bibitem[Maharana et~al.(2024)]{maharana2024locomo}
+Adyasha Maharana, Dong-Ho Lee, Sergey Tulyakov, Mohit Bansal, Francesco Barbieri, and Yuwei Fang.
+\newblock Evaluating very long-term conversational memory of LLM agents.
+\newblock In \emph{ACL}, 2024.
+
+\bibitem[Mialon et~al.(2024)]{mialon2024gaia}
+Grégoire Mialon, Clémentine Fourrier, Thomas Wolf, Yann LeCun, and Thomas Scialom.
+\newblock GAIA: A benchmark for general AI assistants.
+\newblock In \emph{ICLR}, 2024.
+
+\bibitem[Michelakis et~al.(2025)]{michelakis2025core}
+Panagiotis Michelakis, Yiannis Hadjiyiannis, and Dimitrios Stamoulis.
+\newblock CORE: Full-path evaluation of LLM agents beyond final state.
+\newblock arXiv:2509.20998, 2025.
+
+\bibitem[Nie et~al.(2026)]{nie2026astronos}
+Zhenhang Nie, Gui Zheng, Xudong Sun, Tailong Zhu, and Bin Zhang.
+\newblock AstronOS: A unified execution model and runtime for long-horizon agentic systems.
+\newblock arXiv:2608.16381, 2026.
+
+\bibitem[Packer et~al.(2023)]{packer2023memgpt}
+Charles Packer, Vivian Fang, Shishir G. Patil, Kevin Lin, Sarah Wooders, and Joseph E. Gonzalez.
+\newblock MemGPT: Towards LLMs as operating systems.
+\newblock arXiv:2310.08560, 2023.
+
+\bibitem[Park et~al.(2023)]{park2023generative}
+Joon Sung Park et~al.
+\newblock Generative agents: Interactive simulacra of human behavior.
+\newblock In \emph{UIST}, 2023.
+
+\bibitem[Patil et~al.(2024)]{patil2024gorilla}
+Shishir G. Patil, Tianjun Zhang, Xin Wang, and Joseph E. Gonzalez.
+\newblock Gorilla: Large language model connected with massive APIs.
+\newblock In \emph{NeurIPS}, 2024.
+
+\bibitem[Patil et~al.(2025)]{patil2025bfcl}
+Shishir G. Patil et~al.
+\newblock The Berkeley Function Calling Leaderboard (BFCL): From tool use to agentic evaluation of large language models.
+\newblock In \emph{ICML}, 2025.
+
+\bibitem[Qian et~al.(2024)]{qian2024chatdev}
+Chen Qian et~al.
+\newblock ChatDev: Communicative agents for software development.
+\newblock In \emph{ACL}, 2024.
+
+\bibitem[Qin et~al.(2024)]{qin2024toolllm}
+Yujia Qin et~al.
+\newblock ToolLLM: Facilitating large language models to master 16000+ real-world APIs.
+\newblock In \emph{ICLR}, 2024.
+
+\bibitem[Rastogi et~al.(2020)]{rastogi2020sgd}
+Abhinav Rastogi, Xiaoxue Zang, Srinivas Sunkara, Raghav Gupta, and Pranav Khaitan.
+\newblock Towards scalable multi-domain conversational agents: The schema-guided dialogue dataset.
+\newblock In \emph{AAAI}, 2020.
+
+\bibitem[Schick et~al.(2023)]{schick2023toolformer}
+Timo Schick et~al.
+\newblock Toolformer: Language models can teach themselves to use tools.
+\newblock In \emph{NeurIPS}, 2023.
+
+\bibitem[Shen et~al.(2026)]{shen2026mem2act}
+Yiting Shen, Kun Li, Wei Zhou, and Songlin Hu.
+\newblock Mem2ActBench: A benchmark for evaluating long-term memory utilization in task-oriented autonomous agents.
+\newblock In \emph{ACL}, 2026.
+
+\bibitem[Shinn et~al.(2023)]{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik Narasimhan, and Shunyu Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock In \emph{NeurIPS}, 2023.
+
+\bibitem[Sun et~al.(2026)]{sun2026mustmaybe}
+Yiheng Sun, Huifei Wang, Yancheng Zhu, Zhenyu Li, Zebin Zhao, and Yifan Yuan.
+\newblock When ``Must'' becomes ``Maybe'': Constraint weakening in LLM agent workflows.
+\newblock arXiv:2608.24569, 2026.
+
+\bibitem[Trivedi et~al.(2024)]{trivedi2024appworld}
+Harsh Trivedi et~al.
+\newblock AppWorld: A controllable world of apps and people for benchmarking interactive coding agents.
+\newblock In \emph{ACL}, 2024.
+
+\bibitem[Wang et~al.(2026)]{wang2026facts}
+Yian Wang, Agam Goyal, Eshwar Chandrasekharan, and Hari Sundaram.
+\newblock Facts without rules: Boundary metadata collapse in multi-agent LLM handoffs.
+\newblock arXiv:2608.29028, 2026.
+
+\bibitem[Wu et~al.(2019)]{wu2019trade}
+Chien-Sheng Wu et~al.
+\newblock Transferable multi-domain state generator for task-oriented dialogue systems.
+\newblock In \emph{ACL}, 2019.
+
+\bibitem[Wu et~al.(2025)]{wu2025longmemeval}
+Di Wu, Hongwei Wang, Wenhao Yu, Yuwei Zhang, Kai-Wei Chang, and Dong Yu.
+\newblock LongMemEval: Benchmarking chat assistants on long-term interactive memory.
+\newblock In \emph{ICLR}, 2025.
+
+\bibitem[Wu et~al.(2024)]{wu2024autogen}
+Qingyun Wu et~al.
+\newblock AutoGen: Enabling next-gen LLM applications via multi-agent conversation.
+\newblock In \emph{COLM}, 2024.
+
+\bibitem[Xie et~al.(2024)]{xie2024osworld}
+Tianbao Xie et~al.
+\newblock OSWorld: Benchmarking multimodal agents for open-ended tasks in real computer environments.
+\newblock In \emph{NeurIPS}, 2024.
+
+\bibitem[Xu et~al.(2026)]{xu2026structmem}
+Buqiang Xu et~al.
+\newblock StructMem: Structured memory for long-horizon behavior in LLMs.
+\newblock In \emph{ACL}, 2026.
+
+\bibitem[Yao et~al.(2022)]{yao2022webshop}
+Shunyu Yao, Howard Chen, John Yang, and Karthik Narasimhan.
+\newblock WebShop: Towards scalable real-world web interaction with grounded language agents.
+\newblock In \emph{NeurIPS}, 2022.
+
+\bibitem[Yao et~al.(2023)]{yao2023react}
+Shunyu Yao et~al.
+\newblock ReAct: Synergizing reasoning and acting in language models.
+\newblock In \emph{ICLR}, 2023.
+
+\bibitem[Yao et~al.(2025)]{yao2025taubench}
+Shunyu Yao, Noah Shinn, Pedram Razavi, and Karthik Narasimhan.
+\newblock \(\tau\)-bench: A benchmark for tool-agent-user interaction in real-world domains.
+\newblock In \emph{ICLR}, 2025.
+
+\bibitem[Yoran et~al.(2024)]{yoran2024assistantbench}
+Ori Yoran et~al.
+\newblock AssistantBench: Can web agents solve realistic and time-consuming tasks?
+\newblock In \emph{EMNLP}, 2024.
+
+\bibitem[Zhong et~al.(2024)]{zhong2024memorybank}
+Wanjun Zhong, Lianghong Guo, Qiqi Gao, He Ye, and Yanlin Wang.
+\newblock MemoryBank: Enhancing large language models with long-term memory.
+\newblock In \emph{AAAI}, 2024.
+
+\bibitem[Zhou et~al.(2024)]{zhou2024webarena}
+Shuyan Zhou et~al.
+\newblock WebArena: A realistic web environment for building autonomous agents.
+\newblock In \emph{ICLR}, 2024.
+
+\bibitem[Zhu et~al.(2020)]{zhu2020convlab}
+Qi Zhu et~al.
+\newblock ConvLab-2: An open-source toolkit for building, evaluating, and diagnosing dialogue systems.
+\newblock In \emph{ACL System Demonstrations}, 2020.
+
+\end{thebibliography}
+
+\end{document}

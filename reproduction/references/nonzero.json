@@ -1,0 +1,24 @@
+{
+  "E1_R0_rate": {
+    "percentile_95_ci": [
+      0.0,
+      0.13131313131313133
+    ],
+    "point": 0.06060606060606061,
+    "replicates": 10000,
+    "seed": 20260723,
+    "statistic": "E1_R0_rate",
+    "task_count": 11
+  },
+  "R1_given_E1": {
+    "percentile_95_ci": [
+      0.865979381443299,
+      1.0
+    ],
+    "point": 0.9375,
+    "replicates": 10000,
+    "seed": 20260723,
+    "statistic": "R1_given_E1",
+    "task_count": 11
+  }
+}

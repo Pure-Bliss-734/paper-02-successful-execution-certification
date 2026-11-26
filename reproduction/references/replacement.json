@@ -1,0 +1,15 @@
+{
+  "action_required_success": 0,
+  "mismatch_field_counts": {
+    "primary_target:active": 192,
+    "primary_target:current": 192,
+    "replacement_target:active": 21,
+    "replacement_target:current": 183
+  },
+  "required_endpoint_role_counts": {
+    "primary_target": 192,
+    "replacement_target": 192
+  },
+  "row_count": 192,
+  "rows_with_no_endpoint_field_mismatch": 0
+}

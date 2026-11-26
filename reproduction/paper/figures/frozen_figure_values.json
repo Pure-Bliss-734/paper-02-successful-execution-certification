@@ -1,0 +1,232 @@
+{
+  "figures": {
+    "figure1_state_only_handoff": {
+      "quantitative_values": [],
+      "type": "protocol_diagram"
+    },
+    "figure2_certificate_profile": {
+      "immediate_action_support": {
+        "denominator": 164,
+        "numerator": 118,
+        "percent": 72.0
+      },
+      "state_changing_action_support": {
+        "denominator": 96,
+        "numerator": 90,
+        "percent": 93.8
+      },
+      "strict_global_fidelity": {
+        "denominator": 164,
+        "numerator": 6,
+        "percent": 3.7
+      }
+    },
+    "figure3_same_run_contingency": {
+      "global_state_fidelity_cells_00_01_10_11": [
+        16,
+        0,
+        158,
+        6
+      ],
+      "immediate_action_support_cells_00_01_10_11": [
+        13,
+        3,
+        46,
+        118
+      ],
+      "state_changing_support_cells_00_01_10_11": [
+        0,
+        3,
+        6,
+        90
+      ]
+    },
+    "figure4_deletion_intervention": {
+      "action_accuracy_counts_over_60": {
+        "counterfactual_wrong_field": 40,
+        "delete_required_bundle": 1,
+        "intact_gold_state": 40,
+        "unrelated_perturbation": 40
+      },
+      "delete_minus_intact_percentage_points": {
+        "action_accuracy": -65.0,
+        "outcome_success": -11.7
+      },
+      "outcome_success_counts_over_60": {
+        "counterfactual_wrong_field": 40,
+        "delete_required_bundle": 33,
+        "intact_gold_state": 40,
+        "unrelated_perturbation": 41
+      }
+    },
+    "figure5_replacement_failures": {
+      "action_support_percent": {
+        "allow_deny": 67.2,
+        "apply_bundle": 97.9,
+        "migrate_path": 87.5,
+        "replace_object": 0.0,
+        "select_interface": 96.4
+      },
+      "replacement_lifecycle_mismatch_counts_over_192": {
+        "new_target_active": 21,
+        "new_target_current": 183,
+        "old_target_active": 192,
+        "old_target_current": 192
+      }
+    },
+    "figure6_subgroup_heatmap": {
+      "action": {
+        "allow_deny": [
+          3.6,
+          67.2,
+          82.4,
+          4.6
+        ],
+        "apply_bundle": [
+          1.6,
+          97.9,
+          70.6,
+          3.07
+        ],
+        "migrate_path": [
+          11.5,
+          87.5,
+          93.4,
+          3.64
+        ],
+        "replace_object": [
+          0.0,
+          0.0,
+          88.3,
+          8.46
+        ],
+        "select_interface": [
+          5.7,
+          96.4,
+          94.1,
+          3.36
+        ]
+      },
+      "array_order": [
+        "strict_state_percent",
+        "action_support_percent",
+        "relation_recall_percent",
+        "mean_semantic_errors"
+      ],
+      "family": {
+        "api_migration": [
+          2.6,
+          70.8,
+          94.3,
+          4.76
+        ],
+        "near_name_decoys": [
+          16.1,
+          74.5,
+          86.1,
+          3.79
+        ],
+        "permission_boundary": [
+          3.6,
+          68.8,
+          77.5,
+          5.66
+        ],
+        "protected_information": [
+          0.0,
+          69.3,
+          88.5,
+          4.25
+        ],
+        "requirement_overwrite": [
+          0.0,
+          65.6,
+          87.3,
+          4.66
+        ]
+      },
+      "pool": {
+        "confirmatory": [
+          3.3,
+          70.0,
+          87.6,
+          4.73
+        ],
+        "structural_replication": [
+          5.6,
+          69.6,
+          85.5,
+          4.52
+        ]
+      },
+      "reference": {
+        "action_support_percent": 69.79,
+        "mean_semantic_errors": 4.62,
+        "relation_recall_percent": 86.58,
+        "strict_state_percent": 4.48
+      }
+    },
+    "figure7_state_contrasts": {
+      "checker_repair_minus_blind_review_percentage_points": {
+        "deepseek_action_support": {
+          "estimate": 0.0,
+          "interval": [
+            -1.7,
+            1.7
+          ]
+        },
+        "deepseek_strict_state": {
+          "estimate": 0.4,
+          "interval": [
+            -1.7,
+            2.9
+          ]
+        },
+        "qwen_action_support": {
+          "estimate": -12.5,
+          "interval": [
+            -30.0,
+            2.5
+          ]
+        },
+        "qwen_strict_state": {
+          "estimate": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "structured_minus_natural_percentage_points": {
+        "deepseek_action_support": {
+          "estimate": -3.3,
+          "interval": [
+            -7.5,
+            0.4
+          ]
+        },
+        "deepseek_strict_state": {
+          "estimate": -2.5,
+          "interval": [
+            -6.7,
+            1.2
+          ]
+        },
+        "qwen_action_support": {
+          "estimate": -27.5,
+          "interval": [
+            -47.5,
+            -10.0
+          ]
+        },
+        "qwen_strict_state": {
+          "estimate": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

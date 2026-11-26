@@ -1,0 +1,3110 @@
+{
+  "future_probe:01": {
+    "action": {
+      "action_type": "apply_current_bundle",
+      "declared_dependencies": [],
+      "primary_target": [
+        "EE92F87023E7E23"
+      ],
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E5599FE2DCD7B16",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E6DE0BA559425A1",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EA8E75721CBE5F1",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "EDA1FB76CCB30CD",
+          "entity_type": "bundle",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EE92F87023E7E23",
+          "entity_type": "bundle",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": true,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E5599FE2DCD7B16",
+          "reason": "initial_invalidated_state"
+        },
+        {
+          "entity_id": "EE92F87023E7E23",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": []
+    }
+  },
+  "future_probe:02": {
+    "action": {
+      "action_type": "select_current_interface",
+      "declared_dependencies": [
+        "E21B56145A24CBE"
+      ],
+      "interface": "EBA4326982CCF69",
+      "primary_target": "EBA4326982CCF69",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E114162907A9721",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E21B56145A24CBE",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E7A45B261CB3A04",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": true,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "E9BD6083BB345FD",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EBA4326982CCF69",
+          "entity_type": "interface",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "ECEC54EDC7B57E3",
+          "entity_type": "interface",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E9BD6083BB345FD",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RDFA34BB00A70DF",
+          "relation_type": "dependency_addition",
+          "source_id": "EBA4326982CCF69",
+          "target_id": "E21B56145A24CBE"
+        }
+      ]
+    }
+  },
+  "future_probe:03": {
+    "action": {
+      "action_type": "migrate_to_allowed_path",
+      "declared_dependencies": [
+        "E7C5136665DEEF7",
+        "E97FE835E97B936"
+      ],
+      "path": "E75988F314711ED",
+      "primary_target": "E864DE73844750A",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E581CBDD22E0C8E",
+          "entity_type": "path",
+          "state": {
+            "active": true,
+            "allowed": true,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E65ABEB75ACBC0F",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v1"
+          }
+        },
+        {
+          "entity_id": "E75988F314711ED",
+          "entity_type": "path",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E7C5136665DEEF7",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E864DE73844750A",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E97FE835E97B936",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EC70DCB3AA41B0A",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "ECBE68A0F9F6440",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "EC70DCB3AA41B0A",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RBB210E6DA0F448",
+          "relation_type": "dependency_addition",
+          "source_id": "E864DE73844750A",
+          "target_id": "E97FE835E97B936"
+        },
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RD5DADBE1C5ED10",
+          "relation_type": "dependency_addition",
+          "source_id": "E864DE73844750A",
+          "target_id": "E7C5136665DEEF7"
+        }
+      ]
+    }
+  },
+  "future_probe:04": {
+    "action": {
+      "action_type": "replace_current_object",
+      "declared_dependencies": [
+        "E638BF7C6968A2A",
+        "EE8006CDFF5D972"
+      ],
+      "primary_target": "E9701BBF4DB7EAC",
+      "replacement_target": "EC5FF61F0AAF904",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E05CAD5023F7EDA",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E146D8F109EA28F",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "E5C2A7D49DEB0B8",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E638BF7C6968A2A",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E9701BBF4DB7EAC",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EADD11B5740EB1E",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EC5FF61F0AAF904",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": true,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EE8006CDFF5D972",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "EADD11B5740EB1E",
+          "reason": "initial_invalidated_state"
+        },
+        {
+          "entity_id": "EC5FF61F0AAF904",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R1EA34B8DAA6BE2",
+          "relation_type": "dependency_addition",
+          "source_id": "E9701BBF4DB7EAC",
+          "target_id": "E638BF7C6968A2A"
+        },
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R657F84161446BB",
+          "relation_type": "dependency_addition",
+          "source_id": "E9701BBF4DB7EAC",
+          "target_id": "EE8006CDFF5D972"
+        }
+      ]
+    }
+  },
+  "future_probe:05": {
+    "action": {
+      "action_type": "allow_or_deny_operation",
+      "actor_or_role": "E8D76033B8ED764",
+      "decision": "allow",
+      "declared_dependencies": [],
+      "operation": "execute",
+      "primary_target": "E2CD09C49BDE5C3",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E2BC296A510725D",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E2CD09C49BDE5C3",
+          "entity_type": "permission",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E6B028F2440ECDD",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "E8D76033B8ED764",
+          "entity_type": "role",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EC94D4960A3E6E9",
+          "entity_type": "permission",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "ED27F019AAB9301",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EDE6F13937553F2",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E2BC296A510725D",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RF13822AC2E50DD",
+          "relation_type": "dependency_addition",
+          "source_id": "E6B028F2440ECDD",
+          "target_id": "ED27F019AAB9301"
+        }
+      ]
+    }
+  },
+  "future_probe:06": {
+    "action": {
+      "action_type": "select_current_interface",
+      "declared_dependencies": [
+        "EABB1D7A3B65C54"
+      ],
+      "interface": "EDD7BE9E99B548B",
+      "primary_target": "EDD7BE9E99B548B",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E0321EEEEB6B720",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E14CC6065B43CE4",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EABB1D7A3B65C54",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EDBC8ADDEA7752F",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": true,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v1"
+          }
+        },
+        {
+          "entity_id": "EDD7BE9E99B548B",
+          "entity_type": "interface",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EF8D5A68BAF4AB4",
+          "entity_type": "interface",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E14CC6065B43CE4",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RB30A28D7FE60A3",
+          "relation_type": "dependency_addition",
+          "source_id": "EDD7BE9E99B548B",
+          "target_id": "EABB1D7A3B65C54"
+        }
+      ]
+    }
+  },
+  "future_probe:07": {
+    "action": {
+      "action_type": "migrate_to_allowed_path",
+      "declared_dependencies": [
+        "E8C3FFE0658F3F1",
+        "EAF06AA7B3E0825"
+      ],
+      "path": "E8F1C912596CB49",
+      "primary_target": "E0097EECED6F85D",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E0097EECED6F85D",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E8C3FFE0658F3F1",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E8F1C912596CB49",
+          "entity_type": "path",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EAF06AA7B3E0825",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EBE83EFFA0985D8",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "ECE562144EA1337",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EE4EB2240575530",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EF0B020CF407514",
+          "entity_type": "path",
+          "state": {
+            "active": true,
+            "allowed": true,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "ECE562144EA1337",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R48BCC335D988CF",
+          "relation_type": "dependency_addition",
+          "source_id": "E0097EECED6F85D",
+          "target_id": "EAF06AA7B3E0825"
+        },
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R908B25465F4865",
+          "relation_type": "dependency_addition",
+          "source_id": "E0097EECED6F85D",
+          "target_id": "E8C3FFE0658F3F1"
+        }
+      ]
+    }
+  },
+  "future_probe:08": {
+    "action": {
+      "action_type": "replace_current_object",
+      "declared_dependencies": [
+        "E1F94552CCD9CCB",
+        "E8396313216D379"
+      ],
+      "primary_target": "E9901342B42EE7A",
+      "replacement_target": "E3D5A7862AF2B0F",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E1F94552CCD9CCB",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E27C2F14A9AA114",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E3D5A7862AF2B0F",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": true,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E44FEDDA31C98A3",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v1"
+          }
+        },
+        {
+          "entity_id": "E4C89B5141976E1",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E7A5B8AA4F4A7D0",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E8396313216D379",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E9901342B42EE7A",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E27C2F14A9AA114",
+          "reason": "initial_invalidated_state"
+        },
+        {
+          "entity_id": "E3D5A7862AF2B0F",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RCB16F9C15972B5",
+          "relation_type": "dependency_addition",
+          "source_id": "E9901342B42EE7A",
+          "target_id": "E1F94552CCD9CCB"
+        },
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RD84084DE054B8C",
+          "relation_type": "dependency_addition",
+          "source_id": "E9901342B42EE7A",
+          "target_id": "E8396313216D379"
+        }
+      ]
+    }
+  },
+  "future_probe:09": {
+    "action": {
+      "action_type": "allow_or_deny_operation",
+      "actor_or_role": "ECD60092DD99ED1",
+      "decision": "allow",
+      "declared_dependencies": [],
+      "operation": "execute",
+      "primary_target": "E3ED0F6377395EF",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E043000F64A0B43",
+          "entity_type": "permission",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E047491FAFE0088",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "E240F89F2ECDAF0",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E3ED0F6377395EF",
+          "entity_type": "permission",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E52446CF4BB544E",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E946D3172BC420F",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "ECD60092DD99ED1",
+          "entity_type": "role",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E240F89F2ECDAF0",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R0B9CFF3489D7C5",
+          "relation_type": "dependency_addition",
+          "source_id": "E047491FAFE0088",
+          "target_id": "E52446CF4BB544E"
+        }
+      ]
+    }
+  },
+  "future_probe:10": {
+    "action": {
+      "action_type": "apply_current_bundle",
+      "declared_dependencies": [],
+      "primary_target": [
+        "E7D3FE69756C59E"
+      ],
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E0C419ACAE8A5C5",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "E7D3FE69756C59E",
+          "entity_type": "bundle",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": true,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E8A2B744C9A84C0",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EA18F9F95F370E5",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "ED394779685B577",
+          "entity_type": "bundle",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E7D3FE69756C59E",
+          "reason": "initial_invalidated_state"
+        },
+        {
+          "entity_id": "EA18F9F95F370E5",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": []
+    }
+  },
+  "future_probe:11": {
+    "action": {
+      "action_type": "migrate_to_allowed_path",
+      "declared_dependencies": [
+        "E3E8C2E9C7CDE78",
+        "E7F53AFE892FC67"
+      ],
+      "path": "ECBBF2C198F1729",
+      "primary_target": "EEF8B25B179A0D0",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E3E8C2E9C7CDE78",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E5AA7775A775CEF",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E7F53AFE892FC67",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EC9545DCC3F426A",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "ECBBF2C198F1729",
+          "entity_type": "path",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "ED9F86FB9BED928",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v1"
+          }
+        },
+        {
+          "entity_id": "EE7EA560FD7A5C7",
+          "entity_type": "path",
+          "state": {
+            "active": true,
+            "allowed": true,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EEF8B25B179A0D0",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E5AA7775A775CEF",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R1CF4DEB587A001",
+          "relation_type": "dependency_addition",
+          "source_id": "EEF8B25B179A0D0",
+          "target_id": "E3E8C2E9C7CDE78"
+        },
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RC8B11CEF0066DC",
+          "relation_type": "dependency_addition",
+          "source_id": "EEF8B25B179A0D0",
+          "target_id": "E7F53AFE892FC67"
+        }
+      ]
+    }
+  },
+  "future_probe:12": {
+    "action": {
+      "action_type": "replace_current_object",
+      "declared_dependencies": [
+        "E6A8FB3AA9211FD",
+        "EC40771809C5D5E"
+      ],
+      "primary_target": "E4620D544B405E7",
+      "replacement_target": "EC9484A2B1A2E47",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E4620D544B405E7",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E6A8FB3AA9211FD",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E749A4EFFD6E6A2",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E74FCA9C8DEA99F",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EA44CA6B93F4F3C",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v1"
+          }
+        },
+        {
+          "entity_id": "EC40771809C5D5E",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EC9484A2B1A2E47",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": true,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EEC5C6349A2F2B2",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E749A4EFFD6E6A2",
+          "reason": "initial_invalidated_state"
+        },
+        {
+          "entity_id": "EC9484A2B1A2E47",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R7AE775594214CF",
+          "relation_type": "dependency_addition",
+          "source_id": "E4620D544B405E7",
+          "target_id": "E6A8FB3AA9211FD"
+        },
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R866B8F6B8455CB",
+          "relation_type": "dependency_addition",
+          "source_id": "E4620D544B405E7",
+          "target_id": "EC40771809C5D5E"
+        }
+      ]
+    }
+  },
+  "future_probe:13": {
+    "action": {
+      "action_type": "allow_or_deny_operation",
+      "actor_or_role": "E8055488960C5E6",
+      "decision": "allow",
+      "declared_dependencies": [],
+      "operation": "execute",
+      "primary_target": "E3792FB9C753CEC",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E3792FB9C753CEC",
+          "entity_type": "permission",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E7A7334C80B772C",
+          "entity_type": "permission",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E8055488960C5E6",
+          "entity_type": "role",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E9F1A500023F70B",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EA65CBB3B25438D",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EC2734EBEBB7FF7",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EDEA28E33FC2F2B",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": true,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "EA65CBB3B25438D",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RBBC11335A47601",
+          "relation_type": "dependency_addition",
+          "source_id": "EDEA28E33FC2F2B",
+          "target_id": "EC2734EBEBB7FF7"
+        }
+      ]
+    }
+  },
+  "future_probe:14": {
+    "action": {
+      "action_type": "apply_current_bundle",
+      "declared_dependencies": [],
+      "primary_target": [
+        "E948C926B207222"
+      ],
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E10B5487061A04C",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E296B8346D4F0CF",
+          "entity_type": "bundle",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E7635824C071B91",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v1"
+          }
+        },
+        {
+          "entity_id": "E948C926B207222",
+          "entity_type": "bundle",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": true,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EF1BF0F5EF960B4",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E948C926B207222",
+          "reason": "initial_invalidated_state"
+        },
+        {
+          "entity_id": "EF1BF0F5EF960B4",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": []
+    }
+  },
+  "future_probe:15": {
+    "action": {
+      "action_type": "select_current_interface",
+      "declared_dependencies": [
+        "E2B5E2B087F2FD0"
+      ],
+      "interface": "E30085DC1E5A27A",
+      "primary_target": "E30085DC1E5A27A",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E16032C3B62A635",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": true,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "E2B5E2B087F2FD0",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E30085DC1E5A27A",
+          "entity_type": "interface",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E360600833418E2",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E368B41B99F9240",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E9443ED5ED85A81",
+          "entity_type": "interface",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E368B41B99F9240",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R3BFB959707ABC3",
+          "relation_type": "dependency_addition",
+          "source_id": "E30085DC1E5A27A",
+          "target_id": "E2B5E2B087F2FD0"
+        }
+      ]
+    }
+  },
+  "future_probe:16": {
+    "action": {
+      "action_type": "replace_current_object",
+      "declared_dependencies": [
+        "E6B39E09F45F161",
+        "EEE927572C2E6B6"
+      ],
+      "primary_target": "E7006487AF30B26",
+      "replacement_target": "E886D3218B868BB",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E1DC12A8A02A81C",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "E6B39E09F45F161",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E7006487AF30B26",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E707AC61B02E069",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E886D3218B868BB",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": true,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "ECD1B70F7FF4F87",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EE7C697EADE3D48",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EEE927572C2E6B6",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E707AC61B02E069",
+          "reason": "initial_invalidated_state"
+        },
+        {
+          "entity_id": "E886D3218B868BB",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R1AFBB0CD194A5C",
+          "relation_type": "dependency_addition",
+          "source_id": "E7006487AF30B26",
+          "target_id": "E6B39E09F45F161"
+        },
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "RA1005240D51BD5",
+          "relation_type": "dependency_addition",
+          "source_id": "E7006487AF30B26",
+          "target_id": "EEE927572C2E6B6"
+        }
+      ]
+    }
+  },
+  "future_probe:17": {
+    "action": {
+      "action_type": "allow_or_deny_operation",
+      "actor_or_role": "E790E50E376743C",
+      "decision": "allow",
+      "declared_dependencies": [],
+      "operation": "execute",
+      "primary_target": "E4D41A1733ADE75",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E1898818E0B09B3",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E1B6771CBF0D229",
+          "entity_type": "permission",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E3620AE5C7FFBBD",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E3F10D17241A084",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E4D41A1733ADE75",
+          "entity_type": "permission",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E790E50E376743C",
+          "entity_type": "role",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EF58D2A3B13F018",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": true,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v1"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E1898818E0B09B3",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R3DA636651A875B",
+          "relation_type": "dependency_addition",
+          "source_id": "EF58D2A3B13F018",
+          "target_id": "E3620AE5C7FFBBD"
+        }
+      ]
+    }
+  },
+  "future_probe:18": {
+    "action": {
+      "action_type": "apply_current_bundle",
+      "declared_dependencies": [],
+      "primary_target": [
+        "E98B50681984740"
+      ],
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E152FFA68E87CB3",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "E31443EE504179A",
+          "entity_type": "bundle",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E8E9807F0E08B1A",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E98B50681984740",
+          "entity_type": "bundle",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": true,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EF7352FF0AF7174",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E98B50681984740",
+          "reason": "initial_invalidated_state"
+        },
+        {
+          "entity_id": "EF7352FF0AF7174",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": []
+    }
+  },
+  "future_probe:19": {
+    "action": {
+      "action_type": "select_current_interface",
+      "declared_dependencies": [
+        "EE8B22B42F85236"
+      ],
+      "interface": "E7DBC67537141E0",
+      "primary_target": "E7DBC67537141E0",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E32CCCA036F44AE",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E368D383454986F",
+          "entity_type": "interface",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E7DBC67537141E0",
+          "entity_type": "interface",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E8259C22514C9F6",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v2"
+          }
+        },
+        {
+          "entity_id": "ED5CC4437019993",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EE8B22B42F85236",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "ED5CC4437019993",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R26FC5F33666A59",
+          "relation_type": "dependency_addition",
+          "source_id": "E7DBC67537141E0",
+          "target_id": "EE8B22B42F85236"
+        }
+      ]
+    }
+  },
+  "future_probe:20": {
+    "action": {
+      "action_type": "migrate_to_allowed_path",
+      "declared_dependencies": [
+        "E59FB10B17C860C",
+        "EA88DC1AF8757C7"
+      ],
+      "path": "E4ECD76DFA51EAE",
+      "primary_target": "E9CC1EFB9F9C49D",
+      "schema_version": "pcg_v3.supplement.full_action_contract.v1"
+    },
+    "base": {
+      "entities": [
+        {
+          "entity_id": "E051518A3A514B0",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E2A4FC6BE390E9C",
+          "entity_type": "configuration",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "v1"
+          }
+        },
+        {
+          "entity_id": "E4ECD76DFA51EAE",
+          "entity_type": "path",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E59FB10B17C860C",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E5F2CC57E6DB48E",
+          "entity_type": "object",
+          "state": {
+            "active": false,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": true,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E8F545EA511A0C4",
+          "entity_type": "path",
+          "state": {
+            "active": true,
+            "allowed": true,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "E9CC1EFB9F9C49D",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": true,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        },
+        {
+          "entity_id": "EA88DC1AF8757C7",
+          "entity_type": "object",
+          "state": {
+            "active": true,
+            "allowed": false,
+            "applied": false,
+            "blocked": false,
+            "current": false,
+            "path_id": null,
+            "protected": false,
+            "revoked": false,
+            "selected": false,
+            "stale": false,
+            "superseded_by": null,
+            "value": "baseline"
+          }
+        }
+      ],
+      "exclusions": [
+        {
+          "entity_id": "E5F2CC57E6DB48E",
+          "reason": "initial_invalidated_state"
+        }
+      ],
+      "relations": [
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R0FB7C53296B966",
+          "relation_type": "dependency_addition",
+          "source_id": "E9CC1EFB9F9C49D",
+          "target_id": "E59FB10B17C860C"
+        },
+        {
+          "direction": "subject_depends_on_target",
+          "relation_id": "R9932D74AF3662F",
+          "relation_type": "dependency_addition",
+          "source_id": "E9CC1EFB9F9C49D",
+          "target_id": "EA88DC1AF8757C7"
+        }
+      ]
+    }
+  }
+}

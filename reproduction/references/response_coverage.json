@@ -1,0 +1,82 @@
+{
+  "bridge": {
+    "attempts": 58,
+    "choices": 58,
+    "episodes": 58,
+    "logical_calls": 58,
+    "responses": 58,
+    "unreturned": 0
+  },
+  "capacity_sensitivity_27": {
+    "attempts": 65,
+    "choices": 63,
+    "episodes": 27,
+    "logical_calls": 63,
+    "responses": 63,
+    "unreturned": 2
+  },
+  "controlled_formal_1200": {
+    "attempts": 2661,
+    "choices": 2640,
+    "episodes": 1200,
+    "logical_calls": 2640,
+    "responses": 2640,
+    "unreturned": 21
+  },
+  "future": {
+    "attempts": 253,
+    "choices": 240,
+    "episodes": 120,
+    "logical_calls": 240,
+    "responses": 240,
+    "unreturned": 13
+  },
+  "glm52_third_family_180": {
+    "attempts": 301,
+    "choices": 300,
+    "episodes": 180,
+    "logical_calls": 300,
+    "responses": 300,
+    "unreturned": 1
+  },
+  "natural_repair": {
+    "attempts": 212,
+    "choices": 212,
+    "episodes": 212,
+    "logical_calls": 212,
+    "responses": 212,
+    "unreturned": 0
+  },
+  "paired_intervention_480": {
+    "attempts": 486,
+    "choices": 479,
+    "episodes": 480,
+    "logical_calls": 480,
+    "responses": 479,
+    "unreturned": 7
+  },
+  "qwen": {
+    "attempts": 457,
+    "choices": 440,
+    "episodes": 180,
+    "logical_calls": 440,
+    "responses": 440,
+    "unreturned": 17
+  },
+  "repository_positive_control_300": {
+    "attempts": 688,
+    "choices": 659,
+    "episodes": 300,
+    "logical_calls": 660,
+    "responses": 659,
+    "unreturned": 29
+  },
+  "stage2_ablation_240": {
+    "attempts": 243,
+    "choices": 240,
+    "episodes": 240,
+    "logical_calls": 240,
+    "responses": 240,
+    "unreturned": 3
+  }
+}

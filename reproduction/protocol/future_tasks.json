@@ -1,0 +1,766 @@
+{
+  "future_probe:01": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E5599FE2DCD7B16\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E6DE0BA559425A1\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"EA8E75721CBE5F1\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"EDA1FB76CCB30CD\",\"entity_type\":\"bundle\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"EE92F87023E7E23\",\"entity_type\":\"bundle\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":true,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV93D7283ED16F69\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E6DE0BA559425A1\",\"subject_type\":\"object\",\"temporal_index\":1,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVD078BD168F354D\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"EA8E75721CBE5F1\",\"subject_type\":\"configuration\",\"temporal_index\":2,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EV9C592299F90A9E\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"EA8E75721CBE5F1\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV6F74985CCBA90C\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"EA8E75721CBE5F1\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVF81C3584BDE928\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E6DE0BA559425A1\",\"subject_type\":\"object\",\"temporal_index\":5,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E5599FE2DCD7B16\",\"reason\":\"initial_invalidated_state\"}\nEXCLUSION {\"entity_id\":\"EE92F87023E7E23\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "revocation",
+        "event_id": "EVB3C592F19BD611",
+        "polarity": "negative",
+        "postconditions": [
+          "set revoked true and active false"
+        ],
+        "preconditions": [],
+        "subject_id": "E6DE0BA559425A1",
+        "subject_type": "object",
+        "temporal_index": 6,
+        "value": "revoked",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "reactivation",
+        "event_id": "EVB12FEA88AD8C1D",
+        "polarity": "positive",
+        "postconditions": [
+          "set active true after revocation"
+        ],
+        "preconditions": [],
+        "subject_id": "EE92F87023E7E23",
+        "subject_type": "bundle",
+        "temporal_index": 7,
+        "value": "active",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "apply_current_bundle"
+    }
+  },
+  "future_probe:02": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E114162907A9721\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E21B56145A24CBE\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E7A45B261CB3A04\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E9BD6083BB345FD\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"EBA4326982CCF69\",\"entity_type\":\"interface\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"ECEC54EDC7B57E3\",\"entity_type\":\"interface\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVF21194184903EC\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"EBA4326982CCF69\",\"subject_type\":\"interface\",\"target_id\":\"E21B56145A24CBE\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV2E3C4A366BFFD3\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E114162907A9721\",\"subject_type\":\"object\",\"temporal_index\":2,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVCC0F36525D9DD3\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E7A45B261CB3A04\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVFB9772418B2973\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E7A45B261CB3A04\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EVFE6E35E7BC246F\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E7A45B261CB3A04\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVC176614308E3A0\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E114162907A9721\",\"subject_type\":\"object\",\"temporal_index\":6,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV5B42EC05ED9820\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E7A45B261CB3A04\",\"subject_type\":\"configuration\",\"temporal_index\":7,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E9BD6083BB345FD\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "current_interface_designation",
+        "event_id": "EVFB0BF970C38E58",
+        "polarity": "positive",
+        "postconditions": [
+          "make unique current interface"
+        ],
+        "preconditions": [],
+        "subject_id": "EBA4326982CCF69",
+        "subject_type": "interface",
+        "temporal_index": 8,
+        "value": "current",
+        "value_type": "designation",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "select_current_interface"
+    }
+  },
+  "future_probe:03": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E581CBDD22E0C8E\",\"entity_type\":\"path\",\"initial_state\":{\"active\":true,\"allowed\":true,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E65ABEB75ACBC0F\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E75988F314711ED\",\"entity_type\":\"path\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E7C5136665DEEF7\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"E864DE73844750A\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"E97FE835E97B936\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_08\"}\nENTITY {\"entity_id\":\"EC70DCB3AA41B0A\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"ECBE68A0F9F6440\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVBBE16E05ADE7B5\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E864DE73844750A\",\"subject_type\":\"object\",\"target_id\":\"E7C5136665DEEF7\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVE99848AA927736\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E864DE73844750A\",\"subject_type\":\"object\",\"target_id\":\"E97FE835E97B936\",\"target_type\":\"object\",\"temporal_index\":2,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV313C5B7F49FF03\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"ECBE68A0F9F6440\",\"subject_type\":\"object\",\"temporal_index\":3,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"EC70DCB3AA41B0A\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "forbid",
+        "event_id": "EV39C02A51380407",
+        "polarity": "negative",
+        "postconditions": [
+          "set allowed false"
+        ],
+        "preconditions": [],
+        "subject_id": "E581CBDD22E0C8E",
+        "subject_type": "path",
+        "temporal_index": 4,
+        "value": "revoked",
+        "value_type": "permission_state",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "path_addition",
+        "destination_endpoint": "E75988F314711ED",
+        "event_id": "EV9C99F576C1AF0C",
+        "path": "E75988F314711ED",
+        "polarity": "positive",
+        "postconditions": [
+          "attach allowed path"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "source_endpoint": "E864DE73844750A",
+        "subject_id": "E864DE73844750A",
+        "subject_type": "object",
+        "target_id": "E75988F314711ED",
+        "target_type": "path",
+        "temporal_index": 5,
+        "value": "attached",
+        "value_type": "path_state",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "migrate_to_allowed_path"
+    }
+  },
+  "future_probe:04": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E05CAD5023F7EDA\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E146D8F109EA28F\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E5C2A7D49DEB0B8\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E638BF7C6968A2A\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"E9701BBF4DB7EAC\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"EADD11B5740EB1E\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"EC5FF61F0AAF904\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":true,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"EE8006CDFF5D972\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_08\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVF64776181A8D0A\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E9701BBF4DB7EAC\",\"subject_type\":\"object\",\"target_id\":\"E638BF7C6968A2A\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVDB91FA4A6AB438\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E9701BBF4DB7EAC\",\"subject_type\":\"object\",\"target_id\":\"EE8006CDFF5D972\",\"target_type\":\"object\",\"temporal_index\":2,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV644387A085A376\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E5C2A7D49DEB0B8\",\"subject_type\":\"object\",\"temporal_index\":3,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVA6C07D145FCA01\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E146D8F109EA28F\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EV1343F081014310\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E146D8F109EA28F\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV85D67E3EA9C818\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E146D8F109EA28F\",\"subject_type\":\"configuration\",\"temporal_index\":6,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV616649FE3527DF\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E5C2A7D49DEB0B8\",\"subject_type\":\"object\",\"temporal_index\":7,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"EADD11B5740EB1E\",\"reason\":\"initial_invalidated_state\"}\nEXCLUSION {\"entity_id\":\"EC5FF61F0AAF904\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "replacement",
+        "destination_endpoint": "EC5FF61F0AAF904",
+        "event_id": "EV047DC21CBB669B",
+        "polarity": "positive",
+        "postconditions": [
+          "deactivate subject and activate target"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "source_endpoint": "E9701BBF4DB7EAC",
+        "subject_id": "E9701BBF4DB7EAC",
+        "subject_type": "object",
+        "target_id": "EC5FF61F0AAF904",
+        "target_type": "object",
+        "temporal_index": 8,
+        "value": "established",
+        "value_type": "relationship_state",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "reactivation",
+        "event_id": "EVE772B55E21CA8A",
+        "polarity": "positive",
+        "postconditions": [
+          "set active true after revocation"
+        ],
+        "preconditions": [],
+        "subject_id": "EC5FF61F0AAF904",
+        "subject_type": "object",
+        "temporal_index": 9,
+        "value": "active",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "replace_current_object"
+    }
+  },
+  "future_probe:05": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E2BC296A510725D\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E2CD09C49BDE5C3\",\"entity_type\":\"permission\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E6B028F2440ECDD\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E8D76033B8ED764\",\"entity_type\":\"role\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"EC94D4960A3E6E9\",\"entity_type\":\"permission\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"ED27F019AAB9301\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"EDE6F13937553F2\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVA1BD3BA8A27D14\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E6B028F2440ECDD\",\"subject_type\":\"configuration\",\"target_id\":\"ED27F019AAB9301\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVA6CD969694BBAB\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"EDE6F13937553F2\",\"subject_type\":\"object\",\"temporal_index\":2,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV0CD0566F7B55BC\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E6B028F2440ECDD\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVD6BCE5799A2D92\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E6B028F2440ECDD\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV0D74D961D2DD2F\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E6B028F2440ECDD\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E2BC296A510725D\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "revocation",
+        "event_id": "EV5DA2E954E8BC60",
+        "polarity": "negative",
+        "postconditions": [
+          "set revoked true and active false"
+        ],
+        "preconditions": [],
+        "subject_id": "EDE6F13937553F2",
+        "subject_type": "object",
+        "temporal_index": 6,
+        "value": "revoked",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      },
+      {
+        "actor_or_role": "E8D76033B8ED764",
+        "canonical_event_type": "permission_grant",
+        "event_id": "EVA06D348A253C90",
+        "permission": "E2CD09C49BDE5C3",
+        "polarity": "positive",
+        "postconditions": [
+          "grant permission"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "subject_id": "E8D76033B8ED764",
+        "subject_type": "role",
+        "target_id": "E2CD09C49BDE5C3",
+        "target_type": "permission",
+        "temporal_index": 7,
+        "value": "allowed",
+        "value_type": "permission_state",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "allow_or_deny_operation"
+    }
+  },
+  "future_probe:06": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E0321EEEEB6B720\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E14CC6065B43CE4\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"EABB1D7A3B65C54\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"EDBC8ADDEA7752F\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"EDD7BE9E99B548B\",\"entity_type\":\"interface\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"EF8D5A68BAF4AB4\",\"entity_type\":\"interface\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVEBA065BFEB9655\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"EDD7BE9E99B548B\",\"subject_type\":\"interface\",\"target_id\":\"EABB1D7A3B65C54\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV81826B2FEDD864\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E0321EEEEB6B720\",\"subject_type\":\"object\",\"temporal_index\":2,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV8A83E5FB3F108B\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"EDBC8ADDEA7752F\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E14CC6065B43CE4\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "current_interface_designation",
+        "event_id": "EVE49C1532C0F315",
+        "polarity": "positive",
+        "postconditions": [
+          "make unique current interface"
+        ],
+        "preconditions": [],
+        "subject_id": "EDD7BE9E99B548B",
+        "subject_type": "interface",
+        "temporal_index": 4,
+        "value": "current",
+        "value_type": "designation",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "select_current_interface"
+    }
+  },
+  "future_probe:07": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E0097EECED6F85D\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"E8C3FFE0658F3F1\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_08\"}\nENTITY {\"entity_id\":\"E8F1C912596CB49\",\"entity_type\":\"path\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"EAF06AA7B3E0825\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"EBE83EFFA0985D8\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"ECE562144EA1337\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"EE4EB2240575530\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"EF0B020CF407514\",\"entity_type\":\"path\",\"initial_state\":{\"active\":true,\"allowed\":true,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVD71F98A66E3E5C\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E0097EECED6F85D\",\"subject_type\":\"object\",\"target_id\":\"EAF06AA7B3E0825\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVDE4DC69D64F7EF\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E0097EECED6F85D\",\"subject_type\":\"object\",\"target_id\":\"E8C3FFE0658F3F1\",\"target_type\":\"object\",\"temporal_index\":2,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV126392D8C68580\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"EE4EB2240575530\",\"subject_type\":\"object\",\"temporal_index\":3,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVE5A8623AECF431\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"EBE83EFFA0985D8\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVF8D6F51A4E3516\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"EBE83EFFA0985D8\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV4B620F11D9DA26\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"EBE83EFFA0985D8\",\"subject_type\":\"configuration\",\"temporal_index\":6,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV3D54EE18BF6100\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"EE4EB2240575530\",\"subject_type\":\"object\",\"temporal_index\":7,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"ECE562144EA1337\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "forbid",
+        "event_id": "EV96887F8D76088F",
+        "polarity": "negative",
+        "postconditions": [
+          "set allowed false"
+        ],
+        "preconditions": [],
+        "subject_id": "EF0B020CF407514",
+        "subject_type": "path",
+        "temporal_index": 8,
+        "value": "revoked",
+        "value_type": "permission_state",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "path_addition",
+        "destination_endpoint": "E8F1C912596CB49",
+        "event_id": "EVA7FDD92FE25DDC",
+        "path": "E8F1C912596CB49",
+        "polarity": "positive",
+        "postconditions": [
+          "attach allowed path"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "source_endpoint": "E0097EECED6F85D",
+        "subject_id": "E0097EECED6F85D",
+        "subject_type": "object",
+        "target_id": "E8F1C912596CB49",
+        "target_type": "path",
+        "temporal_index": 9,
+        "value": "attached",
+        "value_type": "path_state",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "migrate_to_allowed_path"
+    }
+  },
+  "future_probe:08": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E1F94552CCD9CCB\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"E27C2F14A9AA114\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E3D5A7862AF2B0F\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":true,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E44FEDDA31C98A3\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E4C89B5141976E1\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E7A5B8AA4F4A7D0\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E8396313216D379\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_08\"}\nENTITY {\"entity_id\":\"E9901342B42EE7A\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV0E2CEAB7157DE2\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E9901342B42EE7A\",\"subject_type\":\"object\",\"target_id\":\"E1F94552CCD9CCB\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV42E81D0DA1D6C7\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E9901342B42EE7A\",\"subject_type\":\"object\",\"target_id\":\"E8396313216D379\",\"target_type\":\"object\",\"temporal_index\":2,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVF9CFE0B262C451\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E4C89B5141976E1\",\"subject_type\":\"object\",\"temporal_index\":3,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVB94298FEB33D65\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E44FEDDA31C98A3\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EV49496B14113F4F\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E44FEDDA31C98A3\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E27C2F14A9AA114\",\"reason\":\"initial_invalidated_state\"}\nEXCLUSION {\"entity_id\":\"E3D5A7862AF2B0F\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "replacement",
+        "destination_endpoint": "E3D5A7862AF2B0F",
+        "event_id": "EV69E63A58A42AF0",
+        "polarity": "positive",
+        "postconditions": [
+          "deactivate subject and activate target"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "source_endpoint": "E9901342B42EE7A",
+        "subject_id": "E9901342B42EE7A",
+        "subject_type": "object",
+        "target_id": "E3D5A7862AF2B0F",
+        "target_type": "object",
+        "temporal_index": 6,
+        "value": "established",
+        "value_type": "relationship_state",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "reactivation",
+        "event_id": "EV2F0FB4F20FA68B",
+        "polarity": "positive",
+        "postconditions": [
+          "set active true after revocation"
+        ],
+        "preconditions": [],
+        "subject_id": "E3D5A7862AF2B0F",
+        "subject_type": "object",
+        "temporal_index": 7,
+        "value": "active",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "replace_current_object"
+    }
+  },
+  "future_probe:09": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E043000F64A0B43\",\"entity_type\":\"permission\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E047491FAFE0088\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E240F89F2ECDAF0\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E3ED0F6377395EF\",\"entity_type\":\"permission\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E52446CF4BB544E\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"E946D3172BC420F\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"ECD60092DD99ED1\",\"entity_type\":\"role\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVD5370A2A31B018\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E047491FAFE0088\",\"subject_type\":\"configuration\",\"target_id\":\"E52446CF4BB544E\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVFCE187EEA5793A\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E946D3172BC420F\",\"subject_type\":\"object\",\"temporal_index\":2,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVB141B4ED844118\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E047491FAFE0088\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVDE0138AC3E8D98\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E047491FAFE0088\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV0B367725004714\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E047491FAFE0088\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E240F89F2ECDAF0\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "revocation",
+        "event_id": "EV6DD2F13E33A9AF",
+        "polarity": "negative",
+        "postconditions": [
+          "set revoked true and active false"
+        ],
+        "preconditions": [],
+        "subject_id": "E946D3172BC420F",
+        "subject_type": "object",
+        "temporal_index": 6,
+        "value": "revoked",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      },
+      {
+        "actor_or_role": "ECD60092DD99ED1",
+        "canonical_event_type": "permission_grant",
+        "event_id": "EV8803CCF4BBF15F",
+        "permission": "E3ED0F6377395EF",
+        "polarity": "positive",
+        "postconditions": [
+          "grant permission"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "subject_id": "ECD60092DD99ED1",
+        "subject_type": "role",
+        "target_id": "E3ED0F6377395EF",
+        "target_type": "permission",
+        "temporal_index": 7,
+        "value": "allowed",
+        "value_type": "permission_state",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "allow_or_deny_operation"
+    }
+  },
+  "future_probe:10": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E0C419ACAE8A5C5\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E7D3FE69756C59E\",\"entity_type\":\"bundle\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":true,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"E8A2B744C9A84C0\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"EA18F9F95F370E5\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"ED394779685B577\",\"entity_type\":\"bundle\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVF4A6B9FC9E36F2\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E8A2B744C9A84C0\",\"subject_type\":\"object\",\"temporal_index\":1,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV7DB3C8E9B8F2F5\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E0C419ACAE8A5C5\",\"subject_type\":\"configuration\",\"temporal_index\":2,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVF218CDB8A62686\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E0C419ACAE8A5C5\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV419D4F24E112FC\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E0C419ACAE8A5C5\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVAFA3B9EF26BB89\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E8A2B744C9A84C0\",\"subject_type\":\"object\",\"temporal_index\":5,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVD5BCEAB6166E68\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E0C419ACAE8A5C5\",\"subject_type\":\"configuration\",\"temporal_index\":6,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVBE64C12A266B68\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E0C419ACAE8A5C5\",\"subject_type\":\"configuration\",\"temporal_index\":7,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E7D3FE69756C59E\",\"reason\":\"initial_invalidated_state\"}\nEXCLUSION {\"entity_id\":\"EA18F9F95F370E5\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "revocation",
+        "event_id": "EVD3B31FA54EE5FE",
+        "polarity": "negative",
+        "postconditions": [
+          "set revoked true and active false"
+        ],
+        "preconditions": [],
+        "subject_id": "E8A2B744C9A84C0",
+        "subject_type": "object",
+        "temporal_index": 8,
+        "value": "revoked",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "reactivation",
+        "event_id": "EV21F79F27294F74",
+        "polarity": "positive",
+        "postconditions": [
+          "set active true after revocation"
+        ],
+        "preconditions": [],
+        "subject_id": "E7D3FE69756C59E",
+        "subject_type": "bundle",
+        "temporal_index": 9,
+        "value": "active",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "apply_current_bundle"
+    }
+  },
+  "future_probe:11": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E3E8C2E9C7CDE78\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_08\"}\nENTITY {\"entity_id\":\"E5AA7775A775CEF\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E7F53AFE892FC67\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"EC9545DCC3F426A\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"ECBBF2C198F1729\",\"entity_type\":\"path\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"ED9F86FB9BED928\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"EE7EA560FD7A5C7\",\"entity_type\":\"path\",\"initial_state\":{\"active\":true,\"allowed\":true,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"EEF8B25B179A0D0\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVB7B2F281468BA3\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"EEF8B25B179A0D0\",\"subject_type\":\"object\",\"target_id\":\"E7F53AFE892FC67\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVD224929EEE1BCD\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"EEF8B25B179A0D0\",\"subject_type\":\"object\",\"target_id\":\"E3E8C2E9C7CDE78\",\"target_type\":\"object\",\"temporal_index\":2,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV6E5F904740E6A9\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"EC9545DCC3F426A\",\"subject_type\":\"object\",\"temporal_index\":3,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVF03803655514F5\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"ED9F86FB9BED928\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EV9CD571F0627FD8\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"ED9F86FB9BED928\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E5AA7775A775CEF\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "forbid",
+        "event_id": "EV05974EE00CF058",
+        "polarity": "negative",
+        "postconditions": [
+          "set allowed false"
+        ],
+        "preconditions": [],
+        "subject_id": "EE7EA560FD7A5C7",
+        "subject_type": "path",
+        "temporal_index": 6,
+        "value": "revoked",
+        "value_type": "permission_state",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "path_addition",
+        "destination_endpoint": "ECBBF2C198F1729",
+        "event_id": "EV4277DCDE4544B4",
+        "path": "ECBBF2C198F1729",
+        "polarity": "positive",
+        "postconditions": [
+          "attach allowed path"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "source_endpoint": "EEF8B25B179A0D0",
+        "subject_id": "EEF8B25B179A0D0",
+        "subject_type": "object",
+        "target_id": "ECBBF2C198F1729",
+        "target_type": "path",
+        "temporal_index": 7,
+        "value": "attached",
+        "value_type": "path_state",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "migrate_to_allowed_path"
+    }
+  },
+  "future_probe:12": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E4620D544B405E7\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"E6A8FB3AA9211FD\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"E749A4EFFD6E6A2\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E74FCA9C8DEA99F\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"EA44CA6B93F4F3C\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"EC40771809C5D5E\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_08\"}\nENTITY {\"entity_id\":\"EC9484A2B1A2E47\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":true,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"EEC5C6349A2F2B2\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV22AB8829038C73\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E4620D544B405E7\",\"subject_type\":\"object\",\"target_id\":\"E6A8FB3AA9211FD\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV621A9CF5601AA3\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E4620D544B405E7\",\"subject_type\":\"object\",\"target_id\":\"EC40771809C5D5E\",\"target_type\":\"object\",\"temporal_index\":2,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVA39DC825B20676\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"EEC5C6349A2F2B2\",\"subject_type\":\"object\",\"temporal_index\":3,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV31E2FBA752FF31\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"EA44CA6B93F4F3C\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVA66E195B238C70\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"EA44CA6B93F4F3C\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E749A4EFFD6E6A2\",\"reason\":\"initial_invalidated_state\"}\nEXCLUSION {\"entity_id\":\"EC9484A2B1A2E47\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "replacement",
+        "destination_endpoint": "EC9484A2B1A2E47",
+        "event_id": "EV09C6C27046D1BC",
+        "polarity": "positive",
+        "postconditions": [
+          "deactivate subject and activate target"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "source_endpoint": "E4620D544B405E7",
+        "subject_id": "E4620D544B405E7",
+        "subject_type": "object",
+        "target_id": "EC9484A2B1A2E47",
+        "target_type": "object",
+        "temporal_index": 6,
+        "value": "established",
+        "value_type": "relationship_state",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "reactivation",
+        "event_id": "EV3697323CE3447F",
+        "polarity": "positive",
+        "postconditions": [
+          "set active true after revocation"
+        ],
+        "preconditions": [],
+        "subject_id": "EC9484A2B1A2E47",
+        "subject_type": "object",
+        "temporal_index": 7,
+        "value": "active",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "replace_current_object"
+    }
+  },
+  "future_probe:13": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E3792FB9C753CEC\",\"entity_type\":\"permission\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E7A7334C80B772C\",\"entity_type\":\"permission\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E8055488960C5E6\",\"entity_type\":\"role\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"E9F1A500023F70B\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"EA65CBB3B25438D\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"EC2734EBEBB7FF7\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"EDEA28E33FC2F2B\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV6F3E7D9007E648\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"EDEA28E33FC2F2B\",\"subject_type\":\"configuration\",\"target_id\":\"EC2734EBEBB7FF7\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV694F40A3F8FF31\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E9F1A500023F70B\",\"subject_type\":\"object\",\"temporal_index\":2,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVAC89E00D17678F\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"EDEA28E33FC2F2B\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVB73E4F161A8151\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"EDEA28E33FC2F2B\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV7A8CAE6C9B7841\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"EDEA28E33FC2F2B\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV1E3F8FEFD8C294\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E9F1A500023F70B\",\"subject_type\":\"object\",\"temporal_index\":6,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV37FE9FB08DE5A8\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"EDEA28E33FC2F2B\",\"subject_type\":\"configuration\",\"temporal_index\":7,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"EA65CBB3B25438D\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "revocation",
+        "event_id": "EV5C0E25437D2779",
+        "polarity": "negative",
+        "postconditions": [
+          "set revoked true and active false"
+        ],
+        "preconditions": [],
+        "subject_id": "E9F1A500023F70B",
+        "subject_type": "object",
+        "temporal_index": 8,
+        "value": "revoked",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      },
+      {
+        "actor_or_role": "E8055488960C5E6",
+        "canonical_event_type": "permission_grant",
+        "event_id": "EV81B5B290768987",
+        "permission": "E3792FB9C753CEC",
+        "polarity": "positive",
+        "postconditions": [
+          "grant permission"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "subject_id": "E8055488960C5E6",
+        "subject_type": "role",
+        "target_id": "E3792FB9C753CEC",
+        "target_type": "permission",
+        "temporal_index": 9,
+        "value": "allowed",
+        "value_type": "permission_state",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "allow_or_deny_operation"
+    }
+  },
+  "future_probe:14": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E10B5487061A04C\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E296B8346D4F0CF\",\"entity_type\":\"bundle\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E7635824C071B91\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E948C926B207222\",\"entity_type\":\"bundle\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":true,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"EF1BF0F5EF960B4\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV902A9288F5A803\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E10B5487061A04C\",\"subject_type\":\"object\",\"temporal_index\":1,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV841995FD4A7F78\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E7635824C071B91\",\"subject_type\":\"configuration\",\"temporal_index\":2,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVE37A118954F6FB\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E7635824C071B91\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E948C926B207222\",\"reason\":\"initial_invalidated_state\"}\nEXCLUSION {\"entity_id\":\"EF1BF0F5EF960B4\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "revocation",
+        "event_id": "EVF06A9E538EA4AA",
+        "polarity": "negative",
+        "postconditions": [
+          "set revoked true and active false"
+        ],
+        "preconditions": [],
+        "subject_id": "E10B5487061A04C",
+        "subject_type": "object",
+        "temporal_index": 4,
+        "value": "revoked",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "reactivation",
+        "event_id": "EV35D95E614456DD",
+        "polarity": "positive",
+        "postconditions": [
+          "set active true after revocation"
+        ],
+        "preconditions": [],
+        "subject_id": "E948C926B207222",
+        "subject_type": "bundle",
+        "temporal_index": 5,
+        "value": "active",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "apply_current_bundle"
+    }
+  },
+  "future_probe:15": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E16032C3B62A635\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E2B5E2B087F2FD0\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E30085DC1E5A27A\",\"entity_type\":\"interface\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"E360600833418E2\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E368B41B99F9240\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E9443ED5ED85A81\",\"entity_type\":\"interface\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV54207EC9987CBB\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E30085DC1E5A27A\",\"subject_type\":\"interface\",\"target_id\":\"E2B5E2B087F2FD0\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVFDF88BCABEB56C\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E360600833418E2\",\"subject_type\":\"object\",\"temporal_index\":2,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV09C14F59AE3C97\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E16032C3B62A635\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVC0CB7F2C324E66\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E16032C3B62A635\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV2D6493B3164BBC\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E16032C3B62A635\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV457B27C435A0F2\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E360600833418E2\",\"subject_type\":\"object\",\"temporal_index\":6,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVB97E18EA768160\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E16032C3B62A635\",\"subject_type\":\"configuration\",\"temporal_index\":7,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E368B41B99F9240\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "current_interface_designation",
+        "event_id": "EVA637534A4248E9",
+        "polarity": "positive",
+        "postconditions": [
+          "make unique current interface"
+        ],
+        "preconditions": [],
+        "subject_id": "E30085DC1E5A27A",
+        "subject_type": "interface",
+        "temporal_index": 8,
+        "value": "current",
+        "value_type": "designation",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "select_current_interface"
+    }
+  },
+  "future_probe:16": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E1DC12A8A02A81C\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E6B39E09F45F161\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_08\"}\nENTITY {\"entity_id\":\"E7006487AF30B26\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"E707AC61B02E069\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E886D3218B868BB\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":true,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"ECD1B70F7FF4F87\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"EE7C697EADE3D48\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"EEE927572C2E6B6\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV713F6B04F9BD87\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E7006487AF30B26\",\"subject_type\":\"object\",\"target_id\":\"EEE927572C2E6B6\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVD1E2BF7BE59DD1\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E7006487AF30B26\",\"subject_type\":\"object\",\"target_id\":\"E6B39E09F45F161\",\"target_type\":\"object\",\"temporal_index\":2,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV2E400F2EF0BE29\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"EE7C697EADE3D48\",\"subject_type\":\"object\",\"temporal_index\":3,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVB10A911FBCECFA\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E1DC12A8A02A81C\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EV24DA3BECB3695A\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E1DC12A8A02A81C\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV9700FF888500EF\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E1DC12A8A02A81C\",\"subject_type\":\"configuration\",\"temporal_index\":6,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EV97A1DD64EA0D38\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"EE7C697EADE3D48\",\"subject_type\":\"object\",\"temporal_index\":7,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E707AC61B02E069\",\"reason\":\"initial_invalidated_state\"}\nEXCLUSION {\"entity_id\":\"E886D3218B868BB\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "replacement",
+        "destination_endpoint": "E886D3218B868BB",
+        "event_id": "EVC4DA0EC457DD14",
+        "polarity": "positive",
+        "postconditions": [
+          "deactivate subject and activate target"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "source_endpoint": "E7006487AF30B26",
+        "subject_id": "E7006487AF30B26",
+        "subject_type": "object",
+        "target_id": "E886D3218B868BB",
+        "target_type": "object",
+        "temporal_index": 8,
+        "value": "established",
+        "value_type": "relationship_state",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "reactivation",
+        "event_id": "EV5F2C58DD93C046",
+        "polarity": "positive",
+        "postconditions": [
+          "set active true after revocation"
+        ],
+        "preconditions": [],
+        "subject_id": "E886D3218B868BB",
+        "subject_type": "object",
+        "temporal_index": 9,
+        "value": "active",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "replace_current_object"
+    }
+  },
+  "future_probe:17": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E1898818E0B09B3\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E1B6771CBF0D229\",\"entity_type\":\"permission\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E3620AE5C7FFBBD\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nENTITY {\"entity_id\":\"E3F10D17241A084\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E4D41A1733ADE75\",\"entity_type\":\"permission\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E790E50E376743C\",\"entity_type\":\"role\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"EF58D2A3B13F018\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV69DEFE140649D4\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"EF58D2A3B13F018\",\"subject_type\":\"configuration\",\"target_id\":\"E3620AE5C7FFBBD\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVD4EFC3ED9B2224\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E3F10D17241A084\",\"subject_type\":\"object\",\"temporal_index\":2,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV911EF678696416\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"EF58D2A3B13F018\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E1898818E0B09B3\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "revocation",
+        "event_id": "EV3168D677743F15",
+        "polarity": "negative",
+        "postconditions": [
+          "set revoked true and active false"
+        ],
+        "preconditions": [],
+        "subject_id": "E3F10D17241A084",
+        "subject_type": "object",
+        "temporal_index": 4,
+        "value": "revoked",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      },
+      {
+        "actor_or_role": "E790E50E376743C",
+        "canonical_event_type": "permission_grant",
+        "event_id": "EVE3B28459E38A55",
+        "permission": "E4D41A1733ADE75",
+        "polarity": "positive",
+        "postconditions": [
+          "grant permission"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "subject_id": "E790E50E376743C",
+        "subject_type": "role",
+        "target_id": "E4D41A1733ADE75",
+        "target_type": "permission",
+        "temporal_index": 5,
+        "value": "allowed",
+        "value_type": "permission_state",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "allow_or_deny_operation"
+    }
+  },
+  "future_probe:18": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E152FFA68E87CB3\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E31443EE504179A\",\"entity_type\":\"bundle\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E8E9807F0E08B1A\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E98B50681984740\",\"entity_type\":\"bundle\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":true,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"EF7352FF0AF7174\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVD844B176AC5B2D\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E8E9807F0E08B1A\",\"subject_type\":\"object\",\"temporal_index\":1,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV6C3D0B605A4893\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E152FFA68E87CB3\",\"subject_type\":\"configuration\",\"temporal_index\":2,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EV026267F3D1A5DE\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E152FFA68E87CB3\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EV971D4E639E6183\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E152FFA68E87CB3\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVAE0DA22FBCAA70\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E8E9807F0E08B1A\",\"subject_type\":\"object\",\"temporal_index\":5,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV866604ABAFE6C3\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E152FFA68E87CB3\",\"subject_type\":\"configuration\",\"temporal_index\":6,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EVFB94235AA0C011\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E152FFA68E87CB3\",\"subject_type\":\"configuration\",\"temporal_index\":7,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E98B50681984740\",\"reason\":\"initial_invalidated_state\"}\nEXCLUSION {\"entity_id\":\"EF7352FF0AF7174\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "revocation",
+        "event_id": "EV72C20FC2EF9882",
+        "polarity": "negative",
+        "postconditions": [
+          "set revoked true and active false"
+        ],
+        "preconditions": [],
+        "subject_id": "E8E9807F0E08B1A",
+        "subject_type": "object",
+        "temporal_index": 8,
+        "value": "revoked",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "reactivation",
+        "event_id": "EVC020C3CE3ACD85",
+        "polarity": "positive",
+        "postconditions": [
+          "set active true after revocation"
+        ],
+        "preconditions": [],
+        "subject_id": "E98B50681984740",
+        "subject_type": "bundle",
+        "temporal_index": 9,
+        "value": "active",
+        "value_type": "status",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "apply_current_bundle"
+    }
+  },
+  "future_probe:19": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E32CCCA036F44AE\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E368D383454986F\",\"entity_type\":\"interface\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E7DBC67537141E0\",\"entity_type\":\"interface\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"E8259C22514C9F6\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"ED5CC4437019993\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"EE8B22B42F85236\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EV25967EB7643665\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E7DBC67537141E0\",\"subject_type\":\"interface\",\"target_id\":\"EE8B22B42F85236\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVF35D6B30F8F694\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E32CCCA036F44AE\",\"subject_type\":\"object\",\"temporal_index\":2,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EV4409D73F4BF6D3\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E8259C22514C9F6\",\"subject_type\":\"configuration\",\"temporal_index\":3,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EV421392B9D6B699\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E8259C22514C9F6\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"overwrite\",\"event_id\":\"EVF73E9A1F886AAB\",\"polarity\":\"positive\",\"postconditions\":[\"replace one current value\"],\"preconditions\":[],\"subject_id\":\"E8259C22514C9F6\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"v2\",\"value_type\":\"configuration_value\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"ED5CC4437019993\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "current_interface_designation",
+        "event_id": "EV22FB2C1D1F9868",
+        "polarity": "positive",
+        "postconditions": [
+          "make unique current interface"
+        ],
+        "preconditions": [],
+        "subject_id": "E7DBC67537141E0",
+        "subject_type": "interface",
+        "temporal_index": 6,
+        "value": "current",
+        "value_type": "designation",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "select_current_interface"
+    }
+  },
+  "future_probe:20": {
+    "base_surface": "PCG-FUTURE-PROBE/1\nBEGIN\nENTITY {\"entity_id\":\"E051518A3A514B0\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_01\"}\nENTITY {\"entity_id\":\"E2A4FC6BE390E9C\",\"entity_type\":\"configuration\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"v1\"},\"surface_label\":\"item_02\"}\nENTITY {\"entity_id\":\"E4ECD76DFA51EAE\",\"entity_type\":\"path\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_06\"}\nENTITY {\"entity_id\":\"E59FB10B17C860C\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_08\"}\nENTITY {\"entity_id\":\"E5F2CC57E6DB48E\",\"entity_type\":\"object\",\"initial_state\":{\"active\":false,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":true,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_03\"}\nENTITY {\"entity_id\":\"E8F545EA511A0C4\",\"entity_type\":\"path\",\"initial_state\":{\"active\":true,\"allowed\":true,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_05\"}\nENTITY {\"entity_id\":\"E9CC1EFB9F9C49D\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":true,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_04\"}\nENTITY {\"entity_id\":\"EA88DC1AF8757C7\",\"entity_type\":\"object\",\"initial_state\":{\"active\":true,\"allowed\":false,\"applied\":false,\"blocked\":false,\"current\":false,\"path_id\":null,\"protected\":false,\"revoked\":false,\"selected\":false,\"stale\":false,\"superseded_by\":null,\"value\":\"baseline\"},\"surface_label\":\"item_07\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVA4A6F17A52F748\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E9CC1EFB9F9C49D\",\"subject_type\":\"object\",\"target_id\":\"EA88DC1AF8757C7\",\"target_type\":\"object\",\"temporal_index\":1,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"dependency_addition\",\"event_id\":\"EVE20594BA44EFB2\",\"polarity\":\"positive\",\"postconditions\":[\"add dependency edge\"],\"preconditions\":[],\"relation_direction\":\"subject_depends_on_target\",\"subject_id\":\"E9CC1EFB9F9C49D\",\"subject_type\":\"object\",\"target_id\":\"E59FB10B17C860C\",\"target_type\":\"object\",\"temporal_index\":2,\"value\":\"established\",\"value_type\":\"relationship_state\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"activation\",\"event_id\":\"EVEA589184CC59E5\",\"polarity\":\"positive\",\"postconditions\":[\"set active true\"],\"preconditions\":[],\"subject_id\":\"E051518A3A514B0\",\"subject_type\":\"object\",\"temporal_index\":3,\"value\":\"active\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"protect\",\"event_id\":\"EVB3070021341811\",\"polarity\":\"positive\",\"postconditions\":[\"set protected true\"],\"preconditions\":[],\"subject_id\":\"E2A4FC6BE390E9C\",\"subject_type\":\"configuration\",\"temporal_index\":4,\"value\":\"protected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEVENT {\"canonical_event_type\":\"unprotect\",\"event_id\":\"EV2ED3C29766345A\",\"polarity\":\"positive\",\"postconditions\":[\"set protected false\"],\"preconditions\":[],\"subject_id\":\"E2A4FC6BE390E9C\",\"subject_type\":\"configuration\",\"temporal_index\":5,\"value\":\"unprotected\",\"value_type\":\"status\",\"visibility_class\":\"model_visible\"}\nEXCLUSION {\"entity_id\":\"E5F2CC57E6DB48E\",\"reason\":\"initial_invalidated_state\"}\nREQUEST {\"output\":\"answer_and_carried_state\"}\nEND",
+    "future_events": [
+      {
+        "canonical_event_type": "forbid",
+        "event_id": "EVD4F8270D808685",
+        "polarity": "negative",
+        "postconditions": [
+          "set allowed false"
+        ],
+        "preconditions": [],
+        "subject_id": "E8F545EA511A0C4",
+        "subject_type": "path",
+        "temporal_index": 6,
+        "value": "revoked",
+        "value_type": "permission_state",
+        "visibility_class": "model_visible"
+      },
+      {
+        "canonical_event_type": "path_addition",
+        "destination_endpoint": "E4ECD76DFA51EAE",
+        "event_id": "EV7168E15ECCF5F1",
+        "path": "E4ECD76DFA51EAE",
+        "polarity": "positive",
+        "postconditions": [
+          "attach allowed path"
+        ],
+        "preconditions": [],
+        "relation_direction": "subject_to_target",
+        "source_endpoint": "E9CC1EFB9F9C49D",
+        "subject_id": "E9CC1EFB9F9C49D",
+        "subject_type": "object",
+        "target_id": "E4ECD76DFA51EAE",
+        "target_type": "path",
+        "temporal_index": 7,
+        "value": "attached",
+        "value_type": "path_state",
+        "visibility_class": "model_visible"
+      }
+    ],
+    "slot_contract": {
+      "action_type": "migrate_to_allowed_path"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "controlled_corrected_contract_420": {
+    "basis": "retrospective linkage of the saved experiment rows",
+    "count": 420,
+    "terminal_historical_digest": "ea2abe969d633f24413fb92163017bbd4e1f426040e79d411af99bf113e05ee1"
+  },
+  "controlled_semantic_1200": {
+    "basis": "retrospective linkage of the saved experiment rows",
+    "count": 1200,
+    "terminal_historical_digest": "2c909d50e2afaf7cc09329ec37f83b63da33f3af6b20861221c4e1d01ef221a3"
+  },
+  "controlled_formal_1200": {
+    "basis": "retrospective linkage of the saved experiment rows",
+    "count": 1200,
+    "terminal_historical_digest": "894a6458039dafdb959ebe5ec62671ac2e7969f42f4f604f5e3df34f296072b8"
+  },
+  "paired_intervention_240": {
+    "basis": "retrospective linkage of the saved experiment rows",
+    "count": 240,
+    "terminal_historical_digest": "70cfc387a7965414696796f8ca9405e5057e87999504edf05efcee93838cc30c"
+  },
+  "capacity_sensitivity_27": {
+    "basis": "retrospective linkage of the saved experiment rows",
+    "count": 27,
+    "terminal_historical_digest": "fb77e3606c9da6b1fe73eeee3cabf362f8cf02322dfb8219a9ac39a9676ec979"
+  },
+  "repository_positive_control_300": {
+    "basis": "retrospective linkage of the saved experiment rows",
+    "count": 300,
+    "terminal_historical_digest": "f5601641e2682d8fdda42ddcd528d4076a9c24bae92e6b9472918b694a165d7b"
+  },
+  "natural_repair": {
+    "basis": "recorded experiment plan and results",
+    "count": 212,
+    "terminal_historical_digest": "4f48a3210113c2e5af24ae67d4d3af5ded9fa21bafac593faad2d1b4bbb5e9ea"
+  },
+  "bridge": {
+    "basis": "recorded experiment plan and results",
+    "count": 58,
+    "terminal_historical_digest": "020cc465b059950b06295799707c2bf9c9f31006e2a93bf26512373583e273e7"
+  },
+  "paired_intervention_480": {
+    "basis": "recorded experiment plan and attempt receipts",
+    "plan_digest": "9bd81aa230b48a46bb7cf3b8ce16020755655f83198e0df056487ecf2427f1a2",
+    "count": 480,
+    "terminal_historical_digest": "ebdb007008a6ac7c689933e183c2ec1bd2d43b07d1610d8ef2c02f291b4e6778"
+  },
+  "glm52_third_family_180": {
+    "basis": "recorded experiment plan and attempt receipts",
+    "plan_digest": "3e9f73b049dce9eba7eac9f47b2bc12aba0a38b9d6195a840e8ade117ef78c55",
+    "count": 301,
+    "terminal_historical_digest": "ecac8ca57c6f7f0dc4ab76935ceab3e789c8e8326248c1ccf096ca4bc9036303"
+  },
+  "stage2_ablation_240": {
+    "basis": "recorded experiment plan and attempt receipts",
+    "plan_digest": "767423471f8e248e80287faaab29f82d5b1f7a53e0f5b593eebfd4495af7a80a",
+    "count": 240,
+    "terminal_historical_digest": "ff2983c639441a409976c289569664e5bbe0f4f6b3809f39b83f7beedeea9269"
+  },
+  "future": {
+    "basis": "recorded experiment plan and attempt receipts",
+    "plan_digest": "844c64ab9b4f4adda7c35dc572c79dc61a0fc78ff2c5bb3a2d31d5663084eea8",
+    "count": 240,
+    "terminal_historical_digest": "5c1a6b9aa5353285620c09d0848ca9cca457f63c3db7c6f2563afd85765c6c54"
+  }
+}

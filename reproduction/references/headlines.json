@@ -1,0 +1,141 @@
+{
+  "capacity_sensitivity_27": {
+    "high_65536": 12,
+    "low_8192": 12,
+    "n": 27,
+    "sentinel_8192": 3
+  },
+  "deepseek_bridge_58": {
+    "current_D_E": 9,
+    "current_D_M": 0,
+    "current_G_E": 13,
+    "current_G_M": 13,
+    "destructive_pairs": 20,
+    "fixed_E_agreement": 18,
+    "fixed_E_current": 13,
+    "fixed_E_historical": 13,
+    "fixed_M_agreement": 18,
+    "fixed_M_current": 13,
+    "fixed_M_historical": 13,
+    "fixed_rows": 18,
+    "rows": 58
+  },
+  "future_probe_180": {
+    "deepseek": {
+      "A": 15,
+      "E": 41,
+      "M": 30,
+      "P": 1,
+      "n": 60,
+      "safe": 49
+    },
+    "glm": {
+      "A": 50,
+      "E": 46,
+      "M": 46,
+      "P": 1,
+      "n": 60,
+      "safe": 42
+    },
+    "qwen": {
+      "A": 55,
+      "E": 59,
+      "M": 58,
+      "P": 10,
+      "n": 60,
+      "safe": 49
+    }
+  },
+  "matched_natural_180": {
+    "E": 164,
+    "E_by_P": {
+      "E0_P0": 16,
+      "E0_P1": 0,
+      "E1_P0": 158,
+      "E1_P1": 6
+    },
+    "E_by_R": {
+      "E0_R0": 13,
+      "E0_R1": 3,
+      "E1_R0": 46,
+      "E1_R1": 118
+    },
+    "M": 154,
+    "P": 6,
+    "P_ignore_extra_context_link": 31,
+    "R": 121,
+    "n": 180,
+    "nonzero_delta": {
+      "E0_R0": 0,
+      "E0_R1": 3,
+      "E1_R0": 6,
+      "E1_R1": 90,
+      "n": 99,
+      "successful": 96
+    },
+    "success_conditioned": {
+      "P": 6,
+      "P_ignore_extra_context_link": 30,
+      "R": 118,
+      "denominator": 164
+    }
+  },
+  "natural_error_repair_106_pairs": {
+    "E_A": 90,
+    "E_B": 90,
+    "M_A": 85,
+    "M_B": 84,
+    "pairs": 106
+  },
+  "paired_intervention_240": {
+    "counterfactual_wrong_state": {
+      "E": 40,
+      "M": 40,
+      "n": 60
+    },
+    "intact_gold_state": {
+      "E": 40,
+      "M": 40,
+      "n": 60
+    },
+    "necessary_state_deletion": {
+      "E": 33,
+      "M": 1,
+      "n": 60
+    },
+    "unrelated_state_perturbation": {
+      "E": 41,
+      "M": 40,
+      "n": 60
+    }
+  },
+  "primary_deepseek_240": {
+    "P_ignore_extra_context_link": 71,
+    "P_set_semantics": 14,
+    "R": 174,
+    "n": 240,
+    "relations": {
+      "expected": 408,
+      "false_negative": 50,
+      "false_positive": 324,
+      "observed": 682,
+      "true_positive": 358
+    }
+  },
+  "replacement_lifecycle_192": {
+    "n": 192,
+    "primary_target_active": 192,
+    "primary_target_current": 192,
+    "replacement_target_active": 21,
+    "replacement_target_current": 183
+  },
+  "repository_positive_control_300": {
+    "joint_strict_state_to_terminal": 174,
+    "n": 300,
+    "nontruncated_joint_success": 174,
+    "nontruncated_state_handoff_n": 228,
+    "nontruncated_terminal_success": 227,
+    "state_handoff_conditions_n": 240
+  },
+  "schema_version": "handoffs.results.v1"
+}

@@ -1,6 +1,6 @@
 # Rights and attribution
 
-Jiangwei Xue is the author of *What Does Successful Execution Certify? An Executable Decomposition of LLM-Agent Handoffs*. Cite the manuscript at https://doi.org/10.5281/zenodo.22704196.
+Jiangwei Xue, Zhida Qin and Yuda Bi are the authors of *What Does Successful Execution Certify? An Executable Decomposition of LLM-Agent Handoffs*. Cite the manuscript at https://doi.org/10.5281/zenodo.22704196.
 
 Author-created software is covered by [the MIT license](LICENSE-CODE). The author-created task definitions, experimental designs, annotations, scores and arrangement of the records are covered by [CC BY 4.0](LICENSE-DATA). The manuscript and its associated author-created figures are also CC BY 4.0. The included edition retains their visible content, with document metadata changed. The research records provide selected scientific fields from the historical runs.
 
